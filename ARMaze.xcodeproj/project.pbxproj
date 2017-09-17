@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB6941D41F6E17EF008AB575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6941D31F6E17EF008AB575 /* AppDelegate.swift */; };
+		DB6941D61F6E17EF008AB575 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6941D51F6E17EF008AB575 /* ViewController.swift */; };
+		DB6941D91F6E17EF008AB575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6941D71F6E17EF008AB575 /* Main.storyboard */; };
+		DB6941DB1F6E17EF008AB575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6941DA1F6E17EF008AB575 /* Assets.xcassets */; };
+		DB6941DE1F6E17EF008AB575 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6941DC1F6E17EF008AB575 /* LaunchScreen.storyboard */; };
+		DB6941E91F6E17EF008AB575 /* ARMazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6941E81F6E17EF008AB575 /* ARMazeTests.swift */; };
+		DB6941F41F6E17EF008AB575 /* ARMazeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6941F31F6E17EF008AB575 /* ARMazeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB6941E51F6E17EF008AB575 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB6941C81F6E17EF008AB575 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB6941CF1F6E17EF008AB575;
+			remoteInfo = ARMaze;
+		};
+		DB6941F01F6E17EF008AB575 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB6941C81F6E17EF008AB575 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB6941CF1F6E17EF008AB575;
+			remoteInfo = ARMaze;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB6941D01F6E17EF008AB575 /* ARMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB6941D31F6E17EF008AB575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DB6941D51F6E17EF008AB575 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB6941D81F6E17EF008AB575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB6941DA1F6E17EF008AB575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB6941DD1F6E17EF008AB575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DB6941DF1F6E17EF008AB575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6941E41F6E17EF008AB575 /* ARMazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARMazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB6941E81F6E17EF008AB575 /* ARMazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMazeTests.swift; sourceTree = "<group>"; };
+		DB6941EA1F6E17EF008AB575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6941EF1F6E17EF008AB575 /* ARMazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARMazeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB6941F31F6E17EF008AB575 /* ARMazeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMazeUITests.swift; sourceTree = "<group>"; };
+		DB6941F51F6E17EF008AB575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB6941CD1F6E17EF008AB575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6941E11F6E17EF008AB575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6941EC1F6E17EF008AB575 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB6941C71F6E17EF008AB575 = {
+			isa = PBXGroup;
+			children = (
+				DB6941D21F6E17EF008AB575 /* ARMaze */,
+				DB6941E71F6E17EF008AB575 /* ARMazeTests */,
+				DB6941F21F6E17EF008AB575 /* ARMazeUITests */,
+				DB6941D11F6E17EF008AB575 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB6941D11F6E17EF008AB575 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB6941D01F6E17EF008AB575 /* ARMaze.app */,
+				DB6941E41F6E17EF008AB575 /* ARMazeTests.xctest */,
+				DB6941EF1F6E17EF008AB575 /* ARMazeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB6941D21F6E17EF008AB575 /* ARMaze */ = {
+			isa = PBXGroup;
+			children = (
+				DB6941D31F6E17EF008AB575 /* AppDelegate.swift */,
+				DB6941D51F6E17EF008AB575 /* ViewController.swift */,
+				DB6941D71F6E17EF008AB575 /* Main.storyboard */,
+				DB6941DA1F6E17EF008AB575 /* Assets.xcassets */,
+				DB6941DC1F6E17EF008AB575 /* LaunchScreen.storyboard */,
+				DB6941DF1F6E17EF008AB575 /* Info.plist */,
+			);
+			path = ARMaze;
+			sourceTree = "<group>";
+		};
+		DB6941E71F6E17EF008AB575 /* ARMazeTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB6941E81F6E17EF008AB575 /* ARMazeTests.swift */,
+				DB6941EA1F6E17EF008AB575 /* Info.plist */,
+			);
+			path = ARMazeTests;
+			sourceTree = "<group>";
+		};
+		DB6941F21F6E17EF008AB575 /* ARMazeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB6941F31F6E17EF008AB575 /* ARMazeUITests.swift */,
+				DB6941F51F6E17EF008AB575 /* Info.plist */,
+			);
+			path = ARMazeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB6941CF1F6E17EF008AB575 /* ARMaze */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB6941F81F6E17EF008AB575 /* Build configuration list for PBXNativeTarget "ARMaze" */;
+			buildPhases = (
+				DB6941CC1F6E17EF008AB575 /* Sources */,
+				DB6941CD1F6E17EF008AB575 /* Frameworks */,
+				DB6941CE1F6E17EF008AB575 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARMaze;
+			productName = ARMaze;
+			productReference = DB6941D01F6E17EF008AB575 /* ARMaze.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB6941E31F6E17EF008AB575 /* ARMazeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB6941FB1F6E17EF008AB575 /* Build configuration list for PBXNativeTarget "ARMazeTests" */;
+			buildPhases = (
+				DB6941E01F6E17EF008AB575 /* Sources */,
+				DB6941E11F6E17EF008AB575 /* Frameworks */,
+				DB6941E21F6E17EF008AB575 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB6941E61F6E17EF008AB575 /* PBXTargetDependency */,
+			);
+			name = ARMazeTests;
+			productName = ARMazeTests;
+			productReference = DB6941E41F6E17EF008AB575 /* ARMazeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB6941EE1F6E17EF008AB575 /* ARMazeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB6941FE1F6E17EF008AB575 /* Build configuration list for PBXNativeTarget "ARMazeUITests" */;
+			buildPhases = (
+				DB6941EB1F6E17EF008AB575 /* Sources */,
+				DB6941EC1F6E17EF008AB575 /* Frameworks */,
+				DB6941ED1F6E17EF008AB575 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB6941F11F6E17EF008AB575 /* PBXTargetDependency */,
+			);
+			name = ARMazeUITests;
+			productName = ARMazeUITests;
+			productReference = DB6941EF1F6E17EF008AB575 /* ARMazeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB6941C81F6E17EF008AB575 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = taraw;
+				TargetAttributes = {
+					DB6941CF1F6E17EF008AB575 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = T8F23BFN6Q;
+						ProvisioningStyle = Automatic;
+					};
+					DB6941E31F6E17EF008AB575 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = T8F23BFN6Q;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DB6941CF1F6E17EF008AB575;
+					};
+					DB6941EE1F6E17EF008AB575 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = T8F23BFN6Q;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DB6941CF1F6E17EF008AB575;
+					};
+				};
+			};
+			buildConfigurationList = DB6941CB1F6E17EF008AB575 /* Build configuration list for PBXProject "ARMaze" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB6941C71F6E17EF008AB575;
+			productRefGroup = DB6941D11F6E17EF008AB575 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB6941CF1F6E17EF008AB575 /* ARMaze */,
+				DB6941E31F6E17EF008AB575 /* ARMazeTests */,
+				DB6941EE1F6E17EF008AB575 /* ARMazeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB6941CE1F6E17EF008AB575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6941DE1F6E17EF008AB575 /* LaunchScreen.storyboard in Resources */,
+				DB6941DB1F6E17EF008AB575 /* Assets.xcassets in Resources */,
+				DB6941D91F6E17EF008AB575 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6941E21F6E17EF008AB575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6941ED1F6E17EF008AB575 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB6941CC1F6E17EF008AB575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6941D61F6E17EF008AB575 /* ViewController.swift in Sources */,
+				DB6941D41F6E17EF008AB575 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6941E01F6E17EF008AB575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6941E91F6E17EF008AB575 /* ARMazeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB6941EB1F6E17EF008AB575 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB6941F41F6E17EF008AB575 /* ARMazeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB6941E61F6E17EF008AB575 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB6941CF1F6E17EF008AB575 /* ARMaze */;
+			targetProxy = DB6941E51F6E17EF008AB575 /* PBXContainerItemProxy */;
+		};
+		DB6941F11F6E17EF008AB575 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB6941CF1F6E17EF008AB575 /* ARMaze */;
+			targetProxy = DB6941F01F6E17EF008AB575 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB6941D71F6E17EF008AB575 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB6941D81F6E17EF008AB575 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB6941DC1F6E17EF008AB575 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB6941DD1F6E17EF008AB575 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB6941F61F6E17EF008AB575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB6941F71F6E17EF008AB575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB6941F91F6E17EF008AB575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T8F23BFN6Q;
+				INFOPLIST_FILE = ARMaze/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taraw.ARMaze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DB6941FA1F6E17EF008AB575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T8F23BFN6Q;
+				INFOPLIST_FILE = ARMaze/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taraw.ARMaze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DB6941FC1F6E17EF008AB575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = T8F23BFN6Q;
+				INFOPLIST_FILE = ARMazeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taraw.ARMazeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARMaze.app/ARMaze";
+			};
+			name = Debug;
+		};
+		DB6941FD1F6E17EF008AB575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = T8F23BFN6Q;
+				INFOPLIST_FILE = ARMazeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taraw.ARMazeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARMaze.app/ARMaze";
+			};
+			name = Release;
+		};
+		DB6941FF1F6E17EF008AB575 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = T8F23BFN6Q;
+				INFOPLIST_FILE = ARMazeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taraw.ARMazeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ARMaze;
+			};
+			name = Debug;
+		};
+		DB6942001F6E17EF008AB575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = T8F23BFN6Q;
+				INFOPLIST_FILE = ARMazeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taraw.ARMazeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = ARMaze;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB6941CB1F6E17EF008AB575 /* Build configuration list for PBXProject "ARMaze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB6941F61F6E17EF008AB575 /* Debug */,
+				DB6941F71F6E17EF008AB575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB6941F81F6E17EF008AB575 /* Build configuration list for PBXNativeTarget "ARMaze" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB6941F91F6E17EF008AB575 /* Debug */,
+				DB6941FA1F6E17EF008AB575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DB6941FB1F6E17EF008AB575 /* Build configuration list for PBXNativeTarget "ARMazeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB6941FC1F6E17EF008AB575 /* Debug */,
+				DB6941FD1F6E17EF008AB575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DB6941FE1F6E17EF008AB575 /* Build configuration list for PBXNativeTarget "ARMazeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB6941FF1F6E17EF008AB575 /* Debug */,
+				DB6942001F6E17EF008AB575 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB6941C81F6E17EF008AB575 /* Project object */;
+}
