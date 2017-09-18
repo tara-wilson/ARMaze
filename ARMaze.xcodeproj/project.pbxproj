@@ -8,12 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		DB6941D41F6E17EF008AB575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6941D31F6E17EF008AB575 /* AppDelegate.swift */; };
-		DB6941D61F6E17EF008AB575 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6941D51F6E17EF008AB575 /* ViewController.swift */; };
-		DB6941D91F6E17EF008AB575 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6941D71F6E17EF008AB575 /* Main.storyboard */; };
+		DB6941D61F6E17EF008AB575 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6941D51F6E17EF008AB575 /* StartViewController.swift */; };
 		DB6941DB1F6E17EF008AB575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6941DA1F6E17EF008AB575 /* Assets.xcassets */; };
 		DB6941DE1F6E17EF008AB575 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6941DC1F6E17EF008AB575 /* LaunchScreen.storyboard */; };
 		DB6941E91F6E17EF008AB575 /* ARMazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6941E81F6E17EF008AB575 /* ARMazeTests.swift */; };
 		DB6941F41F6E17EF008AB575 /* ARMazeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6941F31F6E17EF008AB575 /* ARMazeUITests.swift */; };
+		DB6942021F6E1872008AB575 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6942011F6E1872008AB575 /* NetworkController.swift */; };
+		DBD2078F1F6F2F1C00EBE1FC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD2078E1F6F2F1C00EBE1FC /* Images.xcassets */; };
+		DBD207911F6F343300EBE1FC /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD207901F6F343300EBE1FC /* NameViewController.swift */; };
+		DBD207931F6F346200EBE1FC /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD207921F6F346200EBE1FC /* LevelViewController.swift */; };
+		DBD207951F6F34DF00EBE1FC /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD207941F6F34DF00EBE1FC /* UIColor+Theme.swift */; };
+		DBD207971F6F3F6C00EBE1FC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD207961F6F3F6C00EBE1FC /* MenuViewController.swift */; };
+		DBD2079D1F6FA80500EBE1FC /* ImageMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD2079C1F6FA80500EBE1FC /* ImageMapViewController.swift */; };
+		DBE9308C1F6EE2E40005A272 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE9308B1F6EE2E40005A272 /* InventoryViewController.swift */; };
+		DBE9308E1F6EE3120005A272 /* LeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE9308D1F6EE3120005A272 /* LeaderBoard.swift */; };
+		DBE930901F6EE5350005A272 /* ShipObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE9308F1F6EE5350005A272 /* ShipObject.swift */; };
+		DBE930921F6EE5930005A272 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE930911F6EE5930005A272 /* MapViewController.swift */; };
+		DBE930941F6EE84F0005A272 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE930931F6EE84F0005A272 /* ARView.swift */; };
+		DBE930991F6F15F30005A272 /* ComDish.dae in Resources */ = {isa = PBXBuildFile; fileRef = DBE930961F6F15F30005A272 /* ComDish.dae */; };
+		DBE9309A1F6F15F30005A272 /* Dish.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBE930971F6F15F30005A272 /* Dish.jpg */; };
+		DBE9309B1F6F15F30005A272 /* DishDEAD.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBE930981F6F15F30005A272 /* DishDEAD.jpg */; };
+		DBE9309D1F6F1C280005A272 /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE9309C1F6F1C280005A272 /* Maze.swift */; };
+		DBE9309F1F6F20E00005A272 /* CGmap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBE9309E1F6F20E00005A272 /* CGmap.jpg */; };
+		DBE930A11F6F275F0005A272 /* MapViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE930A01F6F275E0005A272 /* MapViewExtensions.swift */; };
+		F1ADDD22EE2E690F127D7589 /* Pods_ARMaze.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 888FAC6A126BC7558DAE2423 /* Pods_ARMaze.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BD17069D67A74DE411437AE /* Pods-ARMaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARMaze.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARMaze/Pods-ARMaze.debug.xcconfig"; sourceTree = "<group>"; };
+		888FAC6A126BC7558DAE2423 /* Pods_ARMaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARMaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6941D01F6E17EF008AB575 /* ARMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6941D31F6E17EF008AB575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB6941D51F6E17EF008AB575 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DB6941D81F6E17EF008AB575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB6941D51F6E17EF008AB575 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		DB6941DA1F6E17EF008AB575 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6941DD1F6E17EF008AB575 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB6941DF1F6E17EF008AB575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +66,25 @@
 		DB6941EF1F6E17EF008AB575 /* ARMazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARMazeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6941F31F6E17EF008AB575 /* ARMazeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMazeUITests.swift; sourceTree = "<group>"; };
 		DB6941F51F6E17EF008AB575 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6942011F6E1872008AB575 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		DBD2078E1F6F2F1C00EBE1FC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DBD207901F6F343300EBE1FC /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		DBD207921F6F346200EBE1FC /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		DBD207941F6F34DF00EBE1FC /* UIColor+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		DBD207961F6F3F6C00EBE1FC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		DBD2079C1F6FA80500EBE1FC /* ImageMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMapViewController.swift; sourceTree = "<group>"; };
+		DBE9308B1F6EE2E40005A272 /* InventoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
+		DBE9308D1F6EE3120005A272 /* LeaderBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderBoard.swift; sourceTree = "<group>"; };
+		DBE9308F1F6EE5350005A272 /* ShipObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipObject.swift; sourceTree = "<group>"; };
+		DBE930911F6EE5930005A272 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DBE930931F6EE84F0005A272 /* ARView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		DBE930961F6F15F30005A272 /* ComDish.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = ComDish.dae; sourceTree = "<group>"; };
+		DBE930971F6F15F30005A272 /* Dish.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Dish.jpg; sourceTree = "<group>"; };
+		DBE930981F6F15F30005A272 /* DishDEAD.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DishDEAD.jpg; sourceTree = "<group>"; };
+		DBE9309C1F6F1C280005A272 /* Maze.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maze.swift; sourceTree = "<group>"; };
+		DBE9309E1F6F20E00005A272 /* CGmap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CGmap.jpg; sourceTree = "<group>"; };
+		DBE930A01F6F275E0005A272 /* MapViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewExtensions.swift; sourceTree = "<group>"; };
+		DE80D6B2C15C94292EA8F1F8 /* Pods-ARMaze.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARMaze.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARMaze/Pods-ARMaze.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1ADDD22EE2E690F127D7589 /* Pods_ARMaze.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +113,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17B28C16AD405F74B54627C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				888FAC6A126BC7558DAE2423 /* Pods_ARMaze.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE257C1C88B6C15BE22EAFC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BD17069D67A74DE411437AE /* Pods-ARMaze.debug.xcconfig */,
+				DE80D6B2C15C94292EA8F1F8 /* Pods-ARMaze.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DB6941C71F6E17EF008AB575 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +137,8 @@
 				DB6941E71F6E17EF008AB575 /* ARMazeTests */,
 				DB6941F21F6E17EF008AB575 /* ARMazeUITests */,
 				DB6941D11F6E17EF008AB575 /* Products */,
+				BE257C1C88B6C15BE22EAFC3 /* Pods */,
+				17B28C16AD405F74B54627C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +156,12 @@
 			isa = PBXGroup;
 			children = (
 				DB6941D31F6E17EF008AB575 /* AppDelegate.swift */,
-				DB6941D51F6E17EF008AB575 /* ViewController.swift */,
-				DB6941D71F6E17EF008AB575 /* Main.storyboard */,
-				DB6941DA1F6E17EF008AB575 /* Assets.xcassets */,
-				DB6941DC1F6E17EF008AB575 /* LaunchScreen.storyboard */,
-				DB6941DF1F6E17EF008AB575 /* Info.plist */,
+				DB6942011F6E1872008AB575 /* NetworkController.swift */,
+				DBD2079B1F6F58B100EBE1FC /* Intro VC's */,
+				DBD207991F6F589B00EBE1FC /* Map */,
+				DBD2079A1F6F58A800EBE1FC /* Game VC's */,
+				DBD207981F6F589300EBE1FC /* Objects */,
+				DB6942031F6E1886008AB575 /* Resources */,
 			);
 			path = ARMaze;
 			sourceTree = "<group>";
@@ -125,6 +184,70 @@
 			path = ARMazeUITests;
 			sourceTree = "<group>";
 		};
+		DB6942031F6E1886008AB575 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBD2078E1F6F2F1C00EBE1FC /* Images.xcassets */,
+				DBE9309E1F6F20E00005A272 /* CGmap.jpg */,
+				DBE9309C1F6F1C280005A272 /* Maze.swift */,
+				DBE930951F6F15F30005A272 /* Dish_DAE */,
+				DB6941DA1F6E17EF008AB575 /* Assets.xcassets */,
+				DB6941DC1F6E17EF008AB575 /* LaunchScreen.storyboard */,
+				DB6941DF1F6E17EF008AB575 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DBD207981F6F589300EBE1FC /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				DBD207941F6F34DF00EBE1FC /* UIColor+Theme.swift */,
+				DBE9308F1F6EE5350005A272 /* ShipObject.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		DBD207991F6F589B00EBE1FC /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				DBE930911F6EE5930005A272 /* MapViewController.swift */,
+				DBE930A01F6F275E0005A272 /* MapViewExtensions.swift */,
+				DBE930931F6EE84F0005A272 /* ARView.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		DBD2079A1F6F58A800EBE1FC /* Game VC's */ = {
+			isa = PBXGroup;
+			children = (
+				DBE9308B1F6EE2E40005A272 /* InventoryViewController.swift */,
+				DBD207961F6F3F6C00EBE1FC /* MenuViewController.swift */,
+				DBD2079C1F6FA80500EBE1FC /* ImageMapViewController.swift */,
+				DBE9308D1F6EE3120005A272 /* LeaderBoard.swift */,
+			);
+			name = "Game VC's";
+			sourceTree = "<group>";
+		};
+		DBD2079B1F6F58B100EBE1FC /* Intro VC's */ = {
+			isa = PBXGroup;
+			children = (
+				DB6941D51F6E17EF008AB575 /* StartViewController.swift */,
+				DBD207901F6F343300EBE1FC /* NameViewController.swift */,
+				DBD207921F6F346200EBE1FC /* LevelViewController.swift */,
+			);
+			name = "Intro VC's";
+			sourceTree = "<group>";
+		};
+		DBE930951F6F15F30005A272 /* Dish_DAE */ = {
+			isa = PBXGroup;
+			children = (
+				DBE930961F6F15F30005A272 /* ComDish.dae */,
+				DBE930971F6F15F30005A272 /* Dish.jpg */,
+				DBE930981F6F15F30005A272 /* DishDEAD.jpg */,
+			);
+			path = Dish_DAE;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB6941F81F6E17EF008AB575 /* Build configuration list for PBXNativeTarget "ARMaze" */;
 			buildPhases = (
+				22ADFE33D49CAE40CB5412E7 /* [CP] Check Pods Manifest.lock */,
 				DB6941CC1F6E17EF008AB575 /* Sources */,
 				DB6941CD1F6E17EF008AB575 /* Frameworks */,
 				DB6941CE1F6E17EF008AB575 /* Resources */,
+				9876FFF2F23FF433B365BFD3 /* [CP] Embed Pods Frameworks */,
+				87E42F3A3495B4EE3AE2A587 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,7 +363,11 @@
 			files = (
 				DB6941DE1F6E17EF008AB575 /* LaunchScreen.storyboard in Resources */,
 				DB6941DB1F6E17EF008AB575 /* Assets.xcassets in Resources */,
-				DB6941D91F6E17EF008AB575 /* Main.storyboard in Resources */,
+				DBD2078F1F6F2F1C00EBE1FC /* Images.xcassets in Resources */,
+				DBE930991F6F15F30005A272 /* ComDish.dae in Resources */,
+				DBE9309B1F6F15F30005A272 /* DishDEAD.jpg in Resources */,
+				DBE9309A1F6F15F30005A272 /* Dish.jpg in Resources */,
+				DBE9309F1F6F20E00005A272 /* CGmap.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +387,86 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		22ADFE33D49CAE40CB5412E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARMaze-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87E42F3A3495B4EE3AE2A587 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARMaze/Pods-ARMaze-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9876FFF2F23FF433B365BFD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ARMaze/Pods-ARMaze-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/RazzleDazzle/RazzleDazzle.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RazzleDazzle.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARMaze/Pods-ARMaze-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DB6941CC1F6E17EF008AB575 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB6941D61F6E17EF008AB575 /* ViewController.swift in Sources */,
+				DBE930901F6EE5350005A272 /* ShipObject.swift in Sources */,
+				DBE930A11F6F275F0005A272 /* MapViewExtensions.swift in Sources */,
+				DB6941D61F6E17EF008AB575 /* StartViewController.swift in Sources */,
+				DBD207971F6F3F6C00EBE1FC /* MenuViewController.swift in Sources */,
+				DBD207931F6F346200EBE1FC /* LevelViewController.swift in Sources */,
+				DBE9309D1F6F1C280005A272 /* Maze.swift in Sources */,
 				DB6941D41F6E17EF008AB575 /* AppDelegate.swift in Sources */,
+				DBD207951F6F34DF00EBE1FC /* UIColor+Theme.swift in Sources */,
+				DBE9308C1F6EE2E40005A272 /* InventoryViewController.swift in Sources */,
+				DBD2079D1F6FA80500EBE1FC /* ImageMapViewController.swift in Sources */,
+				DBD207911F6F343300EBE1FC /* NameViewController.swift in Sources */,
+				DB6942021F6E1872008AB575 /* NetworkController.swift in Sources */,
+				DBE9308E1F6EE3120005A272 /* LeaderBoard.swift in Sources */,
+				DBE930921F6EE5930005A272 /* MapViewController.swift in Sources */,
+				DBE930941F6EE84F0005A272 /* ARView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,14 +502,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DB6941D71F6E17EF008AB575 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DB6941D81F6E17EF008AB575 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DB6941DC1F6E17EF008AB575 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -415,6 +610,7 @@
 		};
 		DB6941F91F6E17EF008AB575 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BD17069D67A74DE411437AE /* Pods-ARMaze.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T8F23BFN6Q;
@@ -428,6 +624,7 @@
 		};
 		DB6941FA1F6E17EF008AB575 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE80D6B2C15C94292EA8F1F8 /* Pods-ARMaze.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T8F23BFN6Q;
@@ -516,6 +713,7 @@
 				DB6941FA1F6E17EF008AB575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB6941FB1F6E17EF008AB575 /* Build configuration list for PBXNativeTarget "ARMazeTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +722,7 @@
 				DB6941FD1F6E17EF008AB575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB6941FE1F6E17EF008AB575 /* Build configuration list for PBXNativeTarget "ARMazeUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +731,7 @@
 				DB6942001F6E17EF008AB575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
