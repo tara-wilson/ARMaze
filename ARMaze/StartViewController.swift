@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import RazzleDazzle
 
 
 let welcomeOne = "Welcome! You are an astronaut in the year 3000, sent to explore a foreign planet."
@@ -20,6 +19,7 @@ let welcomeThree = "No. You crash landed on the planet. Your spaceship is in pie
 let answerThree = "What?! Well what am I supposed to do?"
 
 let welcomeFour = "Search in the corn fields and find all the pieces of your ship so that you can get back to earth!"
+let answerFour = "Let's go!"
 
 enum Level {
     case easy, hard
@@ -31,7 +31,7 @@ class StartViewController: UIViewController {
     var stringIndex = 0
     var answerIndex = 0
     let welcomeStrings = [welcomeOne, welcomeTwo, welcomeThree, welcomeFour]
-    let answers = [answerOne, answerTwo, answerThree]
+    let answers = [answerOne, answerTwo, answerThree, answerFour]
     var typingBox: UILabel?
     var currentText = ""
     var button: UIButton!
@@ -95,27 +95,26 @@ class StartViewController: UIViewController {
                 showButton()
                 timer?.invalidate()
             }
-        } else {
-            end()
         }
     }
     
-    func end() {
-        //go on to next screen
-    }
-    
     func pressButton() {
-        button.isHidden = true
-        letterIndex = 0
-        currentText = ""
-        self.typingBox?.text = ""
-        fireTimer()
+        if self.answers[answerIndex] == answerFour {
+            let vc = NameViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            answerIndex = answerIndex + 1
+            button.isHidden = true
+            letterIndex = 0
+            currentText = ""
+            self.typingBox?.text = ""
+            fireTimer()
+        }
     }
     
     func showButton() {
         if answerIndex < answers.count {
             button.setTitle(answers[answerIndex], for: .normal)
-            answerIndex = answerIndex + 1
             stringIndex = stringIndex + 1
             let when = DispatchTime.now() + 1
             DispatchQueue.main.asyncAfter(deadline: when) {

@@ -14,12 +14,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>RazzleDazzle.xcscheme</key>
+		<key>PopupDialog.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>leveldb-library.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,17 +42,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C86EE4A792F5F20E6372F62903B7B48</key>
+		<key>0FD73312B4E1D251C54E7F63954E088B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54A41B0BFB5AF584EEF50670B1F1D7CB</key>
+		<key>266AE1506DAD13D34C0725E909C0C476</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8808147FB9F8B783AC0603A1C2A986F8</key>
+		<key>2954226F98F92D2BEEC84A6FA3322D86</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>97F7A1E325E451298A23E481C4768544</key>
 		<dict>
 			<key>primary</key>
 			<true/>

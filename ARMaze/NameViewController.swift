@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PopupDialog
 
 let appFont = "Courier"
 
@@ -51,7 +52,7 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let name = textField.text {
             resignFirstResponder()
-            verifyName(name: name)
+            verifyName(name: name.lowercased())
             return true
         }
         return false
@@ -62,9 +63,45 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     }
     
     func verifyName(name: String) {
-        //tara do this
-        saveName(name: name)
-        openLevel()
+        NetworkController().verifyName(name: name, completion: {
+            success in
+            if success {
+                self.saveName(name: name)
+                self.openLevel()
+            } else {
+                self.nameError()
+            }
+        })
+    }
+    
+    func nameError() {
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        
+        dialogAppearance.backgroundColor      = UIColor.ThemeColors.darkColor
+        dialogAppearance.titleFont            = UIFont(name: appFont, size: 25)!
+        dialogAppearance.titleColor           = UIColor.white
+        dialogAppearance.messageFont          = UIFont(name: appFont, size: 18)!
+        dialogAppearance.messageColor         = UIColor.white
+        
+        nameTextView?.text = ""
+
+        let title = "Oops!"
+        let message = "Sorry, that name is already taken by a fellow astronaut!"
+        
+        let popup = PopupDialog(title: title, message: message)
+        
+        let buttonOne = CancelButton(title: "OK") {
+            print("Alright")
+        }
+        
+        buttonOne.buttonColor = UIColor.ThemeColors.mediumLightColor
+        buttonOne.titleColor = UIColor.ThemeColors.darkColor
+        buttonOne.titleFont = UIFont(name: appFont, size: 18)!
+
+        popup.addButtons([buttonOne])
+        
+        // Present dialog
+        self.present(popup, animated: true, completion: nil)
     }
     
     func openLevel() {

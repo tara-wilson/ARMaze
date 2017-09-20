@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,20 +32,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = win
         window?.makeKeyAndVisible()
         
+        FirebaseApp.configure()
+        
+        NetworkController().getRadius(completion: {
+            newint in 
+        })
+        
+        NetworkController().getLatLong(completion: {
+            vals in
+        })
+        
         return true
     }
 
     func getLevel() -> Level? {
-//        if let savedLevel = UserDefaults.standard.string(forKey: "level") {
-//            switch savedLevel {
-//            case "easy":
-//                return .easy
-//            case "hard":
-//                return .hard
-//            default:
-//                return nil
-//            }
-//        }
+        if let savedLevel = UserDefaults.standard.string(forKey: "level") {
+            switch savedLevel {
+            case "easy":
+                return .easy
+            case "hard":
+                return .hard
+            default:
+                return nil
+            }
+        }
         return nil
     }
 

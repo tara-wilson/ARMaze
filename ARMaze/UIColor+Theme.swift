@@ -35,7 +35,6 @@ extension UIColor {
     struct ThemeColors {
         static let darkColor = UIColor(netHex: 0x4D4250)
         static let mediumDarkColor = UIColor(netHex: 0xB66E6F)
-        static let mediumColor = UIColor(netHex: 0xCF8884)
         static let mediumLightColor = UIColor(netHex: 0xE6A972)
         static let lightColor = UIColor(netHex: 0xF6D169)
     }

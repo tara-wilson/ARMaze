@@ -77,7 +77,7 @@ extension InventoryViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = view.frame.width/2 - 5
+        let width = view.frame.width/2 - 15
         let height = view.frame.height/3
         return CGSize(width: width, height: height)
     }
@@ -98,40 +98,27 @@ class InventoryCollectionCell: UICollectionViewCell {
     var title: UILabel?
     var piece: ShipObject? {
         didSet {
-            
+            cover?.image = piece?.piece.getImage()
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = UIColor.ThemeColors.lightColor
+        contentView.backgroundColor = UIColor.ThemeColors.mediumLightColor
         setUpUI()
     }
     
     func setUpUI() {
         cover = UIImageView()
-        cover?.translatesAutoresizingMaskIntoConstraints = false
         cover?.contentMode = .scaleAspectFit
-        guard let cover = cover else { return }
-        contentView.addSubview(cover)
-        contentView.addConstraints([
-            NSLayoutConstraint(item: cover, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: 15),
-            NSLayoutConstraint(item: cover, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -15),
-            NSLayoutConstraint(item: cover, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 15),
-            NSLayoutConstraint(item: cover, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -80)
-            ])
-        
-        title = UILabel()
-        title?.translatesAutoresizingMaskIntoConstraints = false
-        title?.numberOfLines = 2
-        guard let title = title else { return }
-        contentView.addSubview(title)
-        contentView.addConstraints([
-            NSLayoutConstraint(item: title, attribute: .leading, relatedBy: .equal, toItem: contentView, attribute: .leading, multiplier: 1, constant: 15),
-            NSLayoutConstraint(item: title, attribute: .trailing, relatedBy: .equal, toItem: contentView, attribute: .trailing, multiplier: 1, constant: -15),
-            NSLayoutConstraint(item: title, attribute: .top, relatedBy: .equal, toItem: cover, attribute: .bottom, multiplier: 1, constant: 5),
-            NSLayoutConstraint(item: title, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -15)
-            ])
+        contentView.addSubview(cover!)
+        cover?.snp.makeConstraints({
+            make in
+            make.left.equalTo(contentView).offset(15)
+            make.right.equalTo(contentView).offset(-15)
+            make.top.equalTo(contentView).offset(15)
+            make.bottom.equalTo(contentView).offset(-15)
+        })
     }
     
     required init?(coder aDecoder: NSCoder) {

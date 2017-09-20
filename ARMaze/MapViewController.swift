@@ -134,16 +134,13 @@ class MapViewController: UIViewController {
     }
     
     func setUpTargets(level: Level?) {
-        if let level = level {
-            setEasyTargets()
-        } else {
-            setEasyTargets()
-        }
-        
+        setAllTargets(level: level)
         
         for item in targets {
-            let annotation = MapAnnotation(location: item.location.coordinate, item: item)
-            self.mapView.addAnnotation(annotation)
+            if let location = item.location {
+                let annotation = MapAnnotation(location: location.coordinate, item: item)
+                self.mapView.addAnnotation(annotation)
+            }
         }
     }
     

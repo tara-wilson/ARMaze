@@ -2,8 +2,9 @@ target ‘ARMaze’
 
 use_frameworks!
 pod 'Firebase'
+pod 'Firebase/Database'
 pod 'SnapKit', '~> 3.2.0'
-pod 'RazzleDazzle'
+pod 'PopupDialog', '~> 0.5'
 
 post_install do |installer|
     installer.pods_project.targets.each do |target|

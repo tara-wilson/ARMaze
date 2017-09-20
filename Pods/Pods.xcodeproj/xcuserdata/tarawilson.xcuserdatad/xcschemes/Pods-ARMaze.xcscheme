@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C86EE4A792F5F20E6372F62903B7B48"
+               BlueprintIdentifier = "97F7A1E325E451298A23E481C4768544"
                BuildableName = "Pods_ARMaze.framework"
                BlueprintName = "Pods-ARMaze"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4C86EE4A792F5F20E6372F62903B7B48"
+            BlueprintIdentifier = "97F7A1E325E451298A23E481C4768544"
             BuildableName = "Pods_ARMaze.framework"
             BlueprintName = "Pods-ARMaze"
             ReferencedContainer = "container:Pods.xcodeproj">

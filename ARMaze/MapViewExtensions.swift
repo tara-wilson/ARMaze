@@ -46,10 +46,14 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        var radius = UserDefaults.standard.integer(forKey: "radius")
+        if radius == 0 {
+            radius = 10
+        }
         let coordinate = view.annotation!.coordinate
         
         if let userCoordinate = userLocation {
-            if userCoordinate.distance(from: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)) < 25 {
+//            if userCoordinate.distance(from: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)) < radius {
                 let vc = CameraViewController()
                 
                 if let mapAnnotation = view.annotation as? MapAnnotation {
@@ -59,28 +63,52 @@ extension MapViewController: MKMapViewDelegate {
                     vc.delegate = self
                     self.present(vc, animated: true, completion: nil)
                 }
-            }
+//            }
         }
     }
     
-    func setEasyTargets() {
-        targets.append(ShipObject(item: .entrance, location: ShipObject.entranceLocation))
-        targets.append(ShipObject(item: .afterWalk, location: ShipObject.afterLongWalk))
-        targets.append(ShipObject(item: .shipPiece1, location: ShipObject.post1))
-        targets.append(ShipObject(item: .shipPiece2, location: ShipObject.post2))
-        targets.append(ShipObject(item: .shipPiece3, location: ShipObject.post3))
-        targets.append(ShipObject(item: .shipPiece4, location: ShipObject.post4))
-        targets.append(ShipObject(item: .shipPiece5, location: ShipObject.post5))
-        targets.append(ShipObject(item: .shipPiece6, location: ShipObject.post6))
-        targets.append(ShipObject(item: .shipPiece7, location: ShipObject.post7))
-        targets.append(ShipObject(item: .shipPiece8, location: ShipObject.post8))
-        targets.append(ShipObject(item: .shipPiece9, location: ShipObject.post9))
-        targets.append(ShipObject(item: .shipPiece10, location: ShipObject.post10))
+    func setAllTargets(level: Level?) {
+        targets.append(ShipObject(item: .entrance))
+        targets.append(ShipObject(item: .afterWalk))
+        targets.append(ShipObject(item: .shipPiece1))
+        targets.append(ShipObject(item: .shipPiece2))
+        targets.append(ShipObject(item: .shipPiece3))
+        targets.append(ShipObject(item: .shipPiece4))
+        targets.append(ShipObject(item: .shipPiece5))
+        targets.append(ShipObject(item: .shipPiece6))
+        targets.append(ShipObject(item: .shipPiece7))
+        targets.append(ShipObject(item: .shipPiece8))
+        targets.append(ShipObject(item: .shipPiece9))
+        targets.append(ShipObject(item: .shipPiece10))
+        
+        if level == .hard {
+            targets.append(ShipObject(item: .extraPiece1))
+            targets.append(ShipObject(item: .extraPiece2))
+            targets.append(ShipObject(item: .extraPiece3))
+            targets.append(ShipObject(item: .extraPiece4))
+            targets.append(ShipObject(item: .extraPiece5))
+            targets.append(ShipObject(item: .extraPiece6))
+            targets.append(ShipObject(item: .extraPiece7))
+            targets.append(ShipObject(item: .extraPiece8))
+            targets.append(ShipObject(item: .extraPiece9))
+            targets.append(ShipObject(item: .extraPiece10))
+        }
         removeInventory()
     }
     
     func removeInventory() {
-        
+        let defaults = UserDefaults.standard
+        var toRemove = [Int]()
+        for (index, item) in targets.enumerated() {
+            if defaults.bool(forKey: "\(item.piece.rawValue)_saved") == true {
+                toRemove.insert(index, at: 0)
+                inventory.append(item)
+            }
+        }
+        for index in toRemove {
+            targets.remove(at: index)
+        }
+        saveScore()
     }
     
     func addToInventory(index: Int) {
@@ -88,10 +116,30 @@ extension MapViewController: MKMapViewDelegate {
         self.targets.remove(at: index)
         inventory.append(item)
         saveCollected()
+        if self.targets.count == 0 {
+            alertDone()
+        }
+    }
+    
+    func alertDone() {
+        
     }
     
     func saveCollected() {
-        
+        for item in inventory {
+            UserDefaults.standard.set(true, forKey: "\(item.piece.rawValue)_saved")
+        }
+    }
+    
+    func saveScore() {
+        let numItems = inventory.count
+        let score = Score()
+        score.points = numItems * 100
+        score.time = self.timerInt
+            
+        NetworkController().sendScore(score: score, completion: {
+            score in
+        })
     }
 }
 

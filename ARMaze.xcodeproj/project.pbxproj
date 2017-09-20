@@ -7,6 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0E62FC1F721067009D3680 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB0E62FB1F721067009D3680 /* GoogleService-Info.plist */; };
+		DB0E63021F722A79009D3680 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63011F722A79009D3680 /* radar.png */; };
+		DB0E636E1F7230AC009D3680 /* negx.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63641F7230AC009D3680 /* negx.jpg */; };
+		DB0E636F1F7230AC009D3680 /* negy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63651F7230AC009D3680 /* negy.jpg */; };
+		DB0E63701F7230AC009D3680 /* negz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63661F7230AC009D3680 /* negz.jpg */; };
+		DB0E63711F7230AC009D3680 /* posx.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63671F7230AC009D3680 /* posx.jpg */; };
+		DB0E63721F7230AC009D3680 /* posy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63681F7230AC009D3680 /* posy.jpg */; };
+		DB0E63731F7230AC009D3680 /* posz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63691F7230AC009D3680 /* posz.jpg */; };
+		DB0E63741F7230AC009D3680 /* space-shuttle-orbiter.dae in Resources */ = {isa = PBXBuildFile; fileRef = DB0E636A1F7230AC009D3680 /* space-shuttle-orbiter.dae */; };
+		DB0E63751F7230AC009D3680 /* spstob-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E636B1F7230AC009D3680 /* spstob-1.jpg */; };
+		DB0E63761F7230AC009D3680 /* spstob-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E636C1F7230AC009D3680 /* spstob-2.jpg */; };
+		DB0E63771F7230AC009D3680 /* spstob-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E636D1F7230AC009D3680 /* spstob-3.jpg */; };
+		DB0E63791F7231E7009D3680 /* screw.dae in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63781F7231E7009D3680 /* screw.dae */; };
+		DB0E639E1F72345C009D3680 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E637B1F72345C009D3680 /* back.png */; };
+		DB0E639F1F72345C009D3680 /* bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E637C1F72345C009D3680 /* bottom.png */; };
+		DB0E63A01F72345C009D3680 /* ceilingarraystudio-latlong-1krenderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E637D1F72345C009D3680 /* ceilingarraystudio-latlong-1krenderer.exr */; };
+		DB0E63A11F72345C009D3680 /* ceilingarraystudio-thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E637E1F72345C009D3680 /* ceilingarraystudio-thumb.jpg */; };
+		DB0E63A21F72345C009D3680 /* ceilingarraystudioird-c00renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E637F1F72345C009D3680 /* ceilingarraystudioird-c00renderer.exr */; };
+		DB0E63A31F72345C009D3680 /* ceilingarraystudioird-c01renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63801F72345C009D3680 /* ceilingarraystudioird-c01renderer.exr */; };
+		DB0E63A41F72345C009D3680 /* ceilingarraystudioird-c02renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63811F72345C009D3680 /* ceilingarraystudioird-c02renderer.exr */; };
+		DB0E63A51F72345C009D3680 /* ceilingarraystudioird-c03renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63821F72345C009D3680 /* ceilingarraystudioird-c03renderer.exr */; };
+		DB0E63A61F72345C009D3680 /* ceilingarraystudioird-c04renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63831F72345C009D3680 /* ceilingarraystudioird-c04renderer.exr */; };
+		DB0E63A71F72345C009D3680 /* ceilingarraystudioird-c05renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63841F72345C009D3680 /* ceilingarraystudioird-c05renderer.exr */; };
+		DB0E63A81F72345C009D3680 /* ceilingarraystudiospe-c00renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63851F72345C009D3680 /* ceilingarraystudiospe-c00renderer.exr */; };
+		DB0E63A91F72345C009D3680 /* ceilingarraystudiospe-c01renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63861F72345C009D3680 /* ceilingarraystudiospe-c01renderer.exr */; };
+		DB0E63AA1F72345C009D3680 /* ceilingarraystudiospe-c02renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63871F72345C009D3680 /* ceilingarraystudiospe-c02renderer.exr */; };
+		DB0E63AB1F72345C009D3680 /* ceilingarraystudiospe-c03renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63881F72345C009D3680 /* ceilingarraystudiospe-c03renderer.exr */; };
+		DB0E63AC1F72345C009D3680 /* ceilingarraystudiospe-c04renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63891F72345C009D3680 /* ceilingarraystudiospe-c04renderer.exr */; };
+		DB0E63AD1F72345C009D3680 /* ceilingarraystudiospe-c05renderer.exr in Resources */ = {isa = PBXBuildFile; fileRef = DB0E638A1F72345C009D3680 /* ceilingarraystudiospe-c05renderer.exr */; };
+		DB0E63AE1F72345C009D3680 /* front.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E638B1F72345C009D3680 /* front.png */; };
+		DB0E63AF1F72345C009D3680 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E638C1F72345C009D3680 /* left.png */; };
+		DB0E63B01F72345C009D3680 /* negx.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E638D1F72345C009D3680 /* negx.jpg */; };
+		DB0E63B11F72345C009D3680 /* negx.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E638E1F72345C009D3680 /* negx.png */; };
+		DB0E63B21F72345C009D3680 /* negy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E638F1F72345C009D3680 /* negy.jpg */; };
+		DB0E63B31F72345C009D3680 /* negy.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63901F72345C009D3680 /* negy.png */; };
+		DB0E63B41F72345C009D3680 /* negz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63911F72345C009D3680 /* negz.jpg */; };
+		DB0E63B51F72345C009D3680 /* negz.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63921F72345C009D3680 /* negz.png */; };
+		DB0E63B61F72345C009D3680 /* nissan-front-wheel.dae in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63931F72345C009D3680 /* nissan-front-wheel.dae */; };
+		DB0E63B71F72345C009D3680 /* noisebump.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63941F72345C009D3680 /* noisebump.jpg */; };
+		DB0E63B81F72345C009D3680 /* posx.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63951F72345C009D3680 /* posx.jpg */; };
+		DB0E63B91F72345C009D3680 /* posx.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63961F72345C009D3680 /* posx.png */; };
+		DB0E63BA1F72345C009D3680 /* posy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63971F72345C009D3680 /* posy.jpg */; };
+		DB0E63BB1F72345C009D3680 /* posy.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63981F72345C009D3680 /* posy.png */; };
+		DB0E63BC1F72345C009D3680 /* posz.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E63991F72345C009D3680 /* posz.jpg */; };
+		DB0E63BD1F72345C009D3680 /* posz.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E639A1F72345C009D3680 /* posz.png */; };
+		DB0E63BE1F72345C009D3680 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E639B1F72345C009D3680 /* right.png */; };
+		DB0E63BF1F72345C009D3680 /* rough-asphalt2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DB0E639C1F72345C009D3680 /* rough-asphalt2.jpg */; };
+		DB0E63C01F72345C009D3680 /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = DB0E639D1F72345C009D3680 /* top.png */; };
+		DB5903371F70A608006E5CAD /* ScoreObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5903361F70A608006E5CAD /* ScoreObject.swift */; };
 		DB6941D41F6E17EF008AB575 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6941D31F6E17EF008AB575 /* AppDelegate.swift */; };
 		DB6941D61F6E17EF008AB575 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6941D51F6E17EF008AB575 /* StartViewController.swift */; };
 		DB6941DB1F6E17EF008AB575 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6941DA1F6E17EF008AB575 /* Assets.xcassets */; };
@@ -54,6 +103,55 @@
 /* Begin PBXFileReference section */
 		2BD17069D67A74DE411437AE /* Pods-ARMaze.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARMaze.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARMaze/Pods-ARMaze.debug.xcconfig"; sourceTree = "<group>"; };
 		888FAC6A126BC7558DAE2423 /* Pods_ARMaze.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARMaze.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0E62FB1F721067009D3680 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB0E63011F722A79009D3680 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar.png; sourceTree = "<group>"; };
+		DB0E63641F7230AC009D3680 /* negx.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = negx.jpg; sourceTree = "<group>"; };
+		DB0E63651F7230AC009D3680 /* negy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = negy.jpg; sourceTree = "<group>"; };
+		DB0E63661F7230AC009D3680 /* negz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = negz.jpg; sourceTree = "<group>"; };
+		DB0E63671F7230AC009D3680 /* posx.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = posx.jpg; sourceTree = "<group>"; };
+		DB0E63681F7230AC009D3680 /* posy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = posy.jpg; sourceTree = "<group>"; };
+		DB0E63691F7230AC009D3680 /* posz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = posz.jpg; sourceTree = "<group>"; };
+		DB0E636A1F7230AC009D3680 /* space-shuttle-orbiter.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "space-shuttle-orbiter.dae"; sourceTree = "<group>"; };
+		DB0E636B1F7230AC009D3680 /* spstob-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "spstob-1.jpg"; sourceTree = "<group>"; };
+		DB0E636C1F7230AC009D3680 /* spstob-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "spstob-2.jpg"; sourceTree = "<group>"; };
+		DB0E636D1F7230AC009D3680 /* spstob-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "spstob-3.jpg"; sourceTree = "<group>"; };
+		DB0E63781F7231E7009D3680 /* screw.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = screw.dae; sourceTree = "<group>"; };
+		DB0E637B1F72345C009D3680 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		DB0E637C1F72345C009D3680 /* bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom.png; sourceTree = "<group>"; };
+		DB0E637D1F72345C009D3680 /* ceilingarraystudio-latlong-1krenderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudio-latlong-1krenderer.exr"; sourceTree = "<group>"; };
+		DB0E637E1F72345C009D3680 /* ceilingarraystudio-thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ceilingarraystudio-thumb.jpg"; sourceTree = "<group>"; };
+		DB0E637F1F72345C009D3680 /* ceilingarraystudioird-c00renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudioird-c00renderer.exr"; sourceTree = "<group>"; };
+		DB0E63801F72345C009D3680 /* ceilingarraystudioird-c01renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudioird-c01renderer.exr"; sourceTree = "<group>"; };
+		DB0E63811F72345C009D3680 /* ceilingarraystudioird-c02renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudioird-c02renderer.exr"; sourceTree = "<group>"; };
+		DB0E63821F72345C009D3680 /* ceilingarraystudioird-c03renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudioird-c03renderer.exr"; sourceTree = "<group>"; };
+		DB0E63831F72345C009D3680 /* ceilingarraystudioird-c04renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudioird-c04renderer.exr"; sourceTree = "<group>"; };
+		DB0E63841F72345C009D3680 /* ceilingarraystudioird-c05renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudioird-c05renderer.exr"; sourceTree = "<group>"; };
+		DB0E63851F72345C009D3680 /* ceilingarraystudiospe-c00renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudiospe-c00renderer.exr"; sourceTree = "<group>"; };
+		DB0E63861F72345C009D3680 /* ceilingarraystudiospe-c01renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudiospe-c01renderer.exr"; sourceTree = "<group>"; };
+		DB0E63871F72345C009D3680 /* ceilingarraystudiospe-c02renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudiospe-c02renderer.exr"; sourceTree = "<group>"; };
+		DB0E63881F72345C009D3680 /* ceilingarraystudiospe-c03renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudiospe-c03renderer.exr"; sourceTree = "<group>"; };
+		DB0E63891F72345C009D3680 /* ceilingarraystudiospe-c04renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudiospe-c04renderer.exr"; sourceTree = "<group>"; };
+		DB0E638A1F72345C009D3680 /* ceilingarraystudiospe-c05renderer.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ceilingarraystudiospe-c05renderer.exr"; sourceTree = "<group>"; };
+		DB0E638B1F72345C009D3680 /* front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = front.png; sourceTree = "<group>"; };
+		DB0E638C1F72345C009D3680 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		DB0E638D1F72345C009D3680 /* negx.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = negx.jpg; sourceTree = "<group>"; };
+		DB0E638E1F72345C009D3680 /* negx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = negx.png; sourceTree = "<group>"; };
+		DB0E638F1F72345C009D3680 /* negy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = negy.jpg; sourceTree = "<group>"; };
+		DB0E63901F72345C009D3680 /* negy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = negy.png; sourceTree = "<group>"; };
+		DB0E63911F72345C009D3680 /* negz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = negz.jpg; sourceTree = "<group>"; };
+		DB0E63921F72345C009D3680 /* negz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = negz.png; sourceTree = "<group>"; };
+		DB0E63931F72345C009D3680 /* nissan-front-wheel.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "nissan-front-wheel.dae"; sourceTree = "<group>"; };
+		DB0E63941F72345C009D3680 /* noisebump.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noisebump.jpg; sourceTree = "<group>"; };
+		DB0E63951F72345C009D3680 /* posx.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = posx.jpg; sourceTree = "<group>"; };
+		DB0E63961F72345C009D3680 /* posx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = posx.png; sourceTree = "<group>"; };
+		DB0E63971F72345C009D3680 /* posy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = posy.jpg; sourceTree = "<group>"; };
+		DB0E63981F72345C009D3680 /* posy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = posy.png; sourceTree = "<group>"; };
+		DB0E63991F72345C009D3680 /* posz.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = posz.jpg; sourceTree = "<group>"; };
+		DB0E639A1F72345C009D3680 /* posz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = posz.png; sourceTree = "<group>"; };
+		DB0E639B1F72345C009D3680 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		DB0E639C1F72345C009D3680 /* rough-asphalt2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "rough-asphalt2.jpg"; sourceTree = "<group>"; };
+		DB0E639D1F72345C009D3680 /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top.png; sourceTree = "<group>"; };
+		DB5903361F70A608006E5CAD /* ScoreObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreObject.swift; sourceTree = "<group>"; };
 		DB6941D01F6E17EF008AB575 /* ARMaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARMaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6941D31F6E17EF008AB575 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB6941D51F6E17EF008AB575 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -130,9 +228,69 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DB0E63631F7230AC009D3680 /* space-shuttle-orbiter-dae */ = {
+			isa = PBXGroup;
+			children = (
+				DB0E63641F7230AC009D3680 /* negx.jpg */,
+				DB0E63651F7230AC009D3680 /* negy.jpg */,
+				DB0E63661F7230AC009D3680 /* negz.jpg */,
+				DB0E63671F7230AC009D3680 /* posx.jpg */,
+				DB0E63681F7230AC009D3680 /* posy.jpg */,
+				DB0E63691F7230AC009D3680 /* posz.jpg */,
+				DB0E636A1F7230AC009D3680 /* space-shuttle-orbiter.dae */,
+				DB0E636B1F7230AC009D3680 /* spstob-1.jpg */,
+				DB0E636C1F7230AC009D3680 /* spstob-2.jpg */,
+				DB0E636D1F7230AC009D3680 /* spstob-3.jpg */,
+			);
+			path = "space-shuttle-orbiter-dae";
+			sourceTree = "<group>";
+		};
+		DB0E637A1F72345C009D3680 /* nissan-front-wheel-dae */ = {
+			isa = PBXGroup;
+			children = (
+				DB0E637B1F72345C009D3680 /* back.png */,
+				DB0E637C1F72345C009D3680 /* bottom.png */,
+				DB0E637D1F72345C009D3680 /* ceilingarraystudio-latlong-1krenderer.exr */,
+				DB0E637E1F72345C009D3680 /* ceilingarraystudio-thumb.jpg */,
+				DB0E637F1F72345C009D3680 /* ceilingarraystudioird-c00renderer.exr */,
+				DB0E63801F72345C009D3680 /* ceilingarraystudioird-c01renderer.exr */,
+				DB0E63811F72345C009D3680 /* ceilingarraystudioird-c02renderer.exr */,
+				DB0E63821F72345C009D3680 /* ceilingarraystudioird-c03renderer.exr */,
+				DB0E63831F72345C009D3680 /* ceilingarraystudioird-c04renderer.exr */,
+				DB0E63841F72345C009D3680 /* ceilingarraystudioird-c05renderer.exr */,
+				DB0E63851F72345C009D3680 /* ceilingarraystudiospe-c00renderer.exr */,
+				DB0E63861F72345C009D3680 /* ceilingarraystudiospe-c01renderer.exr */,
+				DB0E63871F72345C009D3680 /* ceilingarraystudiospe-c02renderer.exr */,
+				DB0E63881F72345C009D3680 /* ceilingarraystudiospe-c03renderer.exr */,
+				DB0E63891F72345C009D3680 /* ceilingarraystudiospe-c04renderer.exr */,
+				DB0E638A1F72345C009D3680 /* ceilingarraystudiospe-c05renderer.exr */,
+				DB0E638B1F72345C009D3680 /* front.png */,
+				DB0E638C1F72345C009D3680 /* left.png */,
+				DB0E638D1F72345C009D3680 /* negx.jpg */,
+				DB0E638E1F72345C009D3680 /* negx.png */,
+				DB0E638F1F72345C009D3680 /* negy.jpg */,
+				DB0E63901F72345C009D3680 /* negy.png */,
+				DB0E63911F72345C009D3680 /* negz.jpg */,
+				DB0E63921F72345C009D3680 /* negz.png */,
+				DB0E63931F72345C009D3680 /* nissan-front-wheel.dae */,
+				DB0E63941F72345C009D3680 /* noisebump.jpg */,
+				DB0E63951F72345C009D3680 /* posx.jpg */,
+				DB0E63961F72345C009D3680 /* posx.png */,
+				DB0E63971F72345C009D3680 /* posy.jpg */,
+				DB0E63981F72345C009D3680 /* posy.png */,
+				DB0E63991F72345C009D3680 /* posz.jpg */,
+				DB0E639A1F72345C009D3680 /* posz.png */,
+				DB0E639B1F72345C009D3680 /* right.png */,
+				DB0E639C1F72345C009D3680 /* rough-asphalt2.jpg */,
+				DB0E639D1F72345C009D3680 /* top.png */,
+			);
+			path = "nissan-front-wheel-dae";
+			sourceTree = "<group>";
+		};
 		DB6941C71F6E17EF008AB575 = {
 			isa = PBXGroup;
 			children = (
+				DB0E62FB1F721067009D3680 /* GoogleService-Info.plist */,
 				DB6941D21F6E17EF008AB575 /* ARMaze */,
 				DB6941E71F6E17EF008AB575 /* ARMazeTests */,
 				DB6941F21F6E17EF008AB575 /* ARMazeUITests */,
@@ -187,9 +345,13 @@
 		DB6942031F6E1886008AB575 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DB0E63781F7231E7009D3680 /* screw.dae */,
+				DB0E637A1F72345C009D3680 /* nissan-front-wheel-dae */,
 				DBD2078E1F6F2F1C00EBE1FC /* Images.xcassets */,
 				DBE9309E1F6F20E00005A272 /* CGmap.jpg */,
+				DB0E63011F722A79009D3680 /* radar.png */,
 				DBE9309C1F6F1C280005A272 /* Maze.swift */,
+				DB0E63631F7230AC009D3680 /* space-shuttle-orbiter-dae */,
 				DBE930951F6F15F30005A272 /* Dish_DAE */,
 				DB6941DA1F6E17EF008AB575 /* Assets.xcassets */,
 				DB6941DC1F6E17EF008AB575 /* LaunchScreen.storyboard */,
@@ -201,6 +363,7 @@
 		DBD207981F6F589300EBE1FC /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				DB5903361F70A608006E5CAD /* ScoreObject.swift */,
 				DBD207941F6F34DF00EBE1FC /* UIColor+Theme.swift */,
 				DBE9308F1F6EE5350005A272 /* ShipObject.swift */,
 			);
@@ -361,13 +524,61 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0E63021F722A79009D3680 /* radar.png in Resources */,
+				DB0E63731F7230AC009D3680 /* posz.jpg in Resources */,
+				DB0E63B31F72345C009D3680 /* negy.png in Resources */,
+				DB0E636E1F7230AC009D3680 /* negx.jpg in Resources */,
+				DB0E63721F7230AC009D3680 /* posy.jpg in Resources */,
+				DB0E63B91F72345C009D3680 /* posx.png in Resources */,
+				DB0E63A91F72345C009D3680 /* ceilingarraystudiospe-c01renderer.exr in Resources */,
+				DB0E636F1F7230AC009D3680 /* negy.jpg in Resources */,
+				DB0E63BE1F72345C009D3680 /* right.png in Resources */,
+				DB0E63761F7230AC009D3680 /* spstob-2.jpg in Resources */,
+				DB0E63B21F72345C009D3680 /* negy.jpg in Resources */,
 				DB6941DE1F6E17EF008AB575 /* LaunchScreen.storyboard in Resources */,
+				DB0E63BD1F72345C009D3680 /* posz.png in Resources */,
+				DB0E63AB1F72345C009D3680 /* ceilingarraystudiospe-c03renderer.exr in Resources */,
+				DB0E63A71F72345C009D3680 /* ceilingarraystudioird-c05renderer.exr in Resources */,
+				DB0E62FC1F721067009D3680 /* GoogleService-Info.plist in Resources */,
+				DB0E63741F7230AC009D3680 /* space-shuttle-orbiter.dae in Resources */,
+				DB0E63B61F72345C009D3680 /* nissan-front-wheel.dae in Resources */,
+				DB0E63AF1F72345C009D3680 /* left.png in Resources */,
+				DB0E63A51F72345C009D3680 /* ceilingarraystudioird-c03renderer.exr in Resources */,
+				DB0E63A81F72345C009D3680 /* ceilingarraystudiospe-c00renderer.exr in Resources */,
 				DB6941DB1F6E17EF008AB575 /* Assets.xcassets in Resources */,
+				DB0E63A11F72345C009D3680 /* ceilingarraystudio-thumb.jpg in Resources */,
+				DB0E63B71F72345C009D3680 /* noisebump.jpg in Resources */,
+				DB0E63B81F72345C009D3680 /* posx.jpg in Resources */,
+				DB0E63AC1F72345C009D3680 /* ceilingarraystudiospe-c04renderer.exr in Resources */,
+				DB0E63A61F72345C009D3680 /* ceilingarraystudioird-c04renderer.exr in Resources */,
 				DBD2078F1F6F2F1C00EBE1FC /* Images.xcassets in Resources */,
+				DB0E63BB1F72345C009D3680 /* posy.png in Resources */,
+				DB0E639E1F72345C009D3680 /* back.png in Resources */,
+				DB0E63BF1F72345C009D3680 /* rough-asphalt2.jpg in Resources */,
+				DB0E63B41F72345C009D3680 /* negz.jpg in Resources */,
+				DB0E63B11F72345C009D3680 /* negx.png in Resources */,
+				DB0E63C01F72345C009D3680 /* top.png in Resources */,
+				DB0E63AD1F72345C009D3680 /* ceilingarraystudiospe-c05renderer.exr in Resources */,
+				DB0E63701F7230AC009D3680 /* negz.jpg in Resources */,
+				DB0E63771F7230AC009D3680 /* spstob-3.jpg in Resources */,
+				DB0E63AA1F72345C009D3680 /* ceilingarraystudiospe-c02renderer.exr in Resources */,
+				DB0E63B01F72345C009D3680 /* negx.jpg in Resources */,
+				DB0E63A31F72345C009D3680 /* ceilingarraystudioird-c01renderer.exr in Resources */,
+				DB0E63B51F72345C009D3680 /* negz.png in Resources */,
+				DB0E63BC1F72345C009D3680 /* posz.jpg in Resources */,
+				DB0E639F1F72345C009D3680 /* bottom.png in Resources */,
+				DB0E63BA1F72345C009D3680 /* posy.jpg in Resources */,
+				DB0E63A41F72345C009D3680 /* ceilingarraystudioird-c02renderer.exr in Resources */,
+				DB0E63791F7231E7009D3680 /* screw.dae in Resources */,
+				DB0E63751F7230AC009D3680 /* spstob-1.jpg in Resources */,
 				DBE930991F6F15F30005A272 /* ComDish.dae in Resources */,
+				DB0E63A01F72345C009D3680 /* ceilingarraystudio-latlong-1krenderer.exr in Resources */,
 				DBE9309B1F6F15F30005A272 /* DishDEAD.jpg in Resources */,
 				DBE9309A1F6F15F30005A272 /* Dish.jpg in Resources */,
 				DBE9309F1F6F20E00005A272 /* CGmap.jpg in Resources */,
+				DB0E63A21F72345C009D3680 /* ceilingarraystudioird-c00renderer.exr in Resources */,
+				DB0E63711F7230AC009D3680 /* posx.jpg in Resources */,
+				DB0E63AE1F72345C009D3680 /* front.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,15 +640,17 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ARMaze/Pods-ARMaze-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/RazzleDazzle/RazzleDazzle.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RazzleDazzle.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +680,7 @@
 				DBE9308E1F6EE3120005A272 /* LeaderBoard.swift in Sources */,
 				DBE930921F6EE5930005A272 /* MapViewController.swift in Sources */,
 				DBE930941F6EE84F0005A272 /* ARView.swift in Sources */,
+				DB5903371F70A608006E5CAD /* ScoreObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

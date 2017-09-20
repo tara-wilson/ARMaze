@@ -78,13 +78,23 @@ class CameraViewController: UIViewController {
     
     func setupTarget() {
         let scene = SCNScene(named: target.piece.getDAE())
-        
-        let enemy = scene?.rootNode.childNode(withName: target.piece.getDAEName(), recursively: true)
-        enemy?.position = SCNVector3(x: 0, y: 0, z: 0)
-
         let node = SCNNode()
-        node.addChildNode(enemy!)
-        node.name = "enemy"
+//        print(scene?.rootNode.childNodes)
+//        var enemy = scene?.rootNode
+//        if let _ = scene?.rootNode.childNodes {
+//            enemy = scene?.rootNode.childNode(withName: target.piece.getDAEName(), recursively: true)
+//        }
+//        enemy?.position = SCNVector3(x: 0, y: 0, z: 0)
+        
+        var nodeArray = scene?.rootNode.childNodes
+        
+        for childNode in nodeArray! {
+            node.addChildNode(childNode as SCNNode)
+        }
+
+        
+//        node.addChildNode(enemy!)
+//        node.name = "enemy"
         self.target.itemNode = node
     }
     
@@ -155,7 +165,7 @@ extension CameraViewController: CLLocationManagerDelegate {
     }
     
     func repositionTarget() {
-        let heading = getHeadingForDirectionFromCoordinate(from: userLocation, to: target.location)
+        let heading = getHeadingForDirectionFromCoordinate(from: userLocation, to: target.location!)
         
         let delta = heading - self.heading
         
@@ -170,7 +180,7 @@ extension CameraViewController: CLLocationManagerDelegate {
             rightIndicator.isHidden = true
         }
         
-        let distance = userLocation.distance(from: target.location)
+        let distance = userLocation.distance(from: target.location!)
         if let node = target.itemNode {
             if node.parent == nil {
                 node.position = SCNVector3(x: Float(delta), y: 0, z: Float(-distance))
