@@ -9,6 +9,7 @@
 
 import Foundation
 import UIKit
+import PopupDialog
 
 class LevelViewController: UIViewController {
     
@@ -39,6 +40,7 @@ class LevelViewController: UIViewController {
         
         easy = UIButton()
         easy?.setTitle("Easy", for: .normal)
+        easy?.tag = 0
         easy?.backgroundColor = UIColor.ThemeColors.mediumDarkColor
         easy?.titleLabel?.font = UIFont(name: appFont, size: 18)
         easy?.setTitleColor(UIColor.ThemeColors.mediumLightColor, for: .normal)
@@ -53,6 +55,7 @@ class LevelViewController: UIViewController {
         hard = UIButton()
         hard?.setTitle("Hard", for: .normal)
         hard?.backgroundColor = UIColor.ThemeColors.mediumDarkColor
+        hard?.tag = 1
         hard?.titleLabel?.font = UIFont(name: appFont, size: 18)
         hard?.setTitleColor(UIColor.ThemeColors.mediumLightColor, for: .normal)
         hard?.addTarget(self, action: #selector(LevelViewController.didSelectButton(button:)), for: .touchUpInside)
@@ -66,16 +69,43 @@ class LevelViewController: UIViewController {
     }
     
     func didSelectButton(button: UIButton) {
+        self.level = .easy
         switch button.tag {
-        case 0:
-            self.level = .easy
         case 1:
-            self.level = .hard
+            alertNoHard()
         default:
-            self.level = .easy
+            print("nothing")
         }
         saveLevel(level: self.level!)
         openGame()
+    }
+    
+    func alertNoHard() {
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        
+        dialogAppearance.backgroundColor      = UIColor.ThemeColors.darkColor
+        dialogAppearance.titleFont            = UIFont(name: appFont, size: 25)!
+        dialogAppearance.titleColor           = UIColor.white
+        dialogAppearance.messageFont          = UIFont(name: appFont, size: 18)!
+        dialogAppearance.messageColor         = UIColor.white
+        
+        let title = "Oh no!"
+        let message = "The hard level isn't ready yet. Come back next week!"
+        
+        let popup = PopupDialog(title: title, message: message)
+        
+        let buttonOne = CancelButton(title: "OK") {
+            print("Alright")
+        }
+        
+        buttonOne.buttonColor = UIColor.ThemeColors.mediumLightColor
+        buttonOne.titleColor = UIColor.ThemeColors.darkColor
+        buttonOne.titleFont = UIFont(name: appFont, size: 18)!
+        
+        popup.addButtons([buttonOne])
+        
+        // Present dialog
+        self.present(popup, animated: true, completion: nil)
     }
     
     func saveLevel(level: Level) {

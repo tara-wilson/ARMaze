@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 import MapKit
 import SnapKit
+import PopupDialog
 
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
@@ -121,10 +122,6 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
     
-    func alertDone() {
-        
-    }
-    
     func saveCollected() {
         for item in inventory {
             UserDefaults.standard.set(true, forKey: "\(item.piece.rawValue)_saved")
@@ -141,6 +138,63 @@ extension MapViewController: MKMapViewDelegate {
             score in
         })
     }
+    
+    func alertDone() {
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        
+        dialogAppearance.backgroundColor      = UIColor.ThemeColors.darkColor
+        dialogAppearance.titleFont            = UIFont(name: appFont, size: 25)!
+        dialogAppearance.titleColor           = UIColor.white
+        dialogAppearance.messageFont          = UIFont(name: appFont, size: 18)!
+        dialogAppearance.messageColor         = UIColor.white
+        
+        let title = "YES!"
+        //tara more here....
+        let message = "You did it!"
+        
+        let popup = PopupDialog(title: title, message: message)
+        
+        let buttonOne = CancelButton(title: "OK") {
+            print("Alright")
+        }
+        
+        buttonOne.buttonColor = UIColor.ThemeColors.mediumLightColor
+        buttonOne.titleColor = UIColor.ThemeColors.darkColor
+        buttonOne.titleFont = UIFont(name: appFont, size: 18)!
+        
+        popup.addButtons([buttonOne])
+        
+        // Present dialog
+        self.present(popup, animated: true, completion: nil)
+    }
+    
+    func alertFound(item: ShipObject) {
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        
+        dialogAppearance.backgroundColor      = UIColor.ThemeColors.darkColor
+        dialogAppearance.titleFont            = UIFont(name: appFont, size: 25)!
+        dialogAppearance.titleColor           = UIColor.white
+        dialogAppearance.messageFont          = UIFont(name: appFont, size: 18)!
+        dialogAppearance.messageColor         = UIColor.white
+        
+        let title = "FOUND"
+        let message = item.piece.getFoundString()
+        
+        let popup = PopupDialog(title: title, message: message)
+        
+        let buttonOne = CancelButton(title: "OK") {
+            print("Alright")
+        }
+        
+        buttonOne.buttonColor = UIColor.ThemeColors.mediumLightColor
+        buttonOne.titleColor = UIColor.ThemeColors.darkColor
+        buttonOne.titleFont = UIFont(name: appFont, size: 18)!
+        
+        popup.addButtons([buttonOne])
+        
+        // Present dialog
+        self.present(popup, animated: true, completion: nil)
+    }
 }
 
 extension MapViewController: ARControllerDelegate {
@@ -148,8 +202,10 @@ extension MapViewController: ARControllerDelegate {
     func viewController(controller: CameraViewController, tappedTarget: ShipObject) {
         
         let index = self.targets.index(where: {$0.itemName == tappedTarget.itemName})
+        let item = targets[index!]
         
         addToInventory(index: index!)
+        alertFound(item: item)
         if selectedAnnotation != nil {
             mapView.removeAnnotation(selectedAnnotation!)
         }

@@ -17,7 +17,7 @@ class LeaderBoardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.ThemeColors.darkColor
+        view.backgroundColor = UIColor.white
         setUpUI()
         setUpTable()
         getLeaders()
@@ -41,7 +41,7 @@ class LeaderBoardViewController: UIViewController {
         view.addSubview(backButton)
         backButton.snp.makeConstraints({ make in
             make.left.equalTo(view.snp.left).offset(10)
-            make.bottom.equalTo(view).offset(-20)
+            make.top.equalTo(view).offset(20)
             make.height.equalTo(50)
             make.width.equalTo(120)
         })

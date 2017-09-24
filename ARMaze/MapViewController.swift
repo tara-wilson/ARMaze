@@ -144,7 +144,7 @@ class MapViewController: UIViewController {
         }
     }
     
-    deinit {
+    override func viewWillDisappear(_ animated: Bool) {
         saveTimer()
         gameTimer.invalidate()
     }

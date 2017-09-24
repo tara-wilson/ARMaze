@@ -30,7 +30,6 @@ class CameraViewController: UIViewController {
     var userLocation = CLLocation()
     let scene = SCNScene()
     let cameraNode = SCNNode()
-    let targetNode = SCNNode(geometry: SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,22 +78,23 @@ class CameraViewController: UIViewController {
     func setupTarget() {
         let scene = SCNScene(named: target.piece.getDAE())
         let node = SCNNode()
-//        print(scene?.rootNode.childNodes)
-//        var enemy = scene?.rootNode
-//        if let _ = scene?.rootNode.childNodes {
-//            enemy = scene?.rootNode.childNode(withName: target.piece.getDAEName(), recursively: true)
-//        }
-//        enemy?.position = SCNVector3(x: 0, y: 0, z: 0)
         
-        var nodeArray = scene?.rootNode.childNodes
-        
-        for childNode in nodeArray! {
-            node.addChildNode(childNode as SCNNode)
+        if let name = target.piece.getDAEName() {
+            var enemy = scene?.rootNode
+            if let _ = scene?.rootNode.childNodes {
+                enemy = scene?.rootNode.childNode(withName: name, recursively: true)
+            }
+            enemy?.position = SCNVector3(x: 0, y: 0, z: 0)
+            node.addChildNode(enemy!)
+        } else {
+            let nodeArray = scene?.rootNode.childNodes
+            
+            for childNode in nodeArray! {
+                node.addChildNode(childNode as SCNNode)
+            }
+            
+            node.position = SCNVector3(x: 0, y: 0, z: 0)
         }
-
-        
-//        node.addChildNode(enemy!)
-//        node.name = "enemy"
         self.target.itemNode = node
     }
     
@@ -180,15 +180,16 @@ extension CameraViewController: CLLocationManagerDelegate {
             rightIndicator.isHidden = true
         }
         
+        //tara here
         let distance = userLocation.distance(from: target.location!)
         if let node = target.itemNode {
             if node.parent == nil {
-                node.position = SCNVector3(x: Float(delta), y: 0, z: Float(-distance))
+                node.position = SCNVector3(x: Float(delta), y: 0, z: -500)
                 scene.rootNode.addChildNode(node)
             } else {
                 //6
                 node.removeAllActions()
-                node.runAction(SCNAction.move(to: SCNVector3(x: Float(delta), y: 0, z: Float(-distance)), duration: 0.2))
+                node.runAction(SCNAction.move(to: SCNVector3(x: Float(delta), y: 0, z: -500), duration: 0.2))
             }
         }
     }

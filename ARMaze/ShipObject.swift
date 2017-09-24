@@ -54,8 +54,8 @@ enum ShipPiece: String {
     case extraPiece10 = "ExtraPiece10"
     
     func getDAE() -> String {
-        return "space-shuttle-orbiter.dae"
-        return "nissan-front-wheel.dae"
+        return "model.dae"
+//        return "nissan-front-wheel.dae"
         
         switch self {
         case .entrance:
@@ -83,21 +83,23 @@ enum ShipPiece: String {
         }
     }
     
+    func getFoundString() -> String {
+        return ""
+    }
+    
     func getImage() -> UIImage {
         return UIImage(named: "radar")!
     }
     
-    func getDAEName() -> String {
-        return "group"
+    func getDAEName() -> String? {
+        return nil
         switch self {
         case .shipPiece1:
             return "DishDEAD"
-        case .shipPiece2:
-            return "Sphere"
         case .shipPiece8:
             return "DishBASE"
         default:
-            return ""
+            return nil
         }
     }
     

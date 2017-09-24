@@ -16,7 +16,6 @@ class MenuViewController: UIViewController {
     var resetButton: UIButton!
     var seeIntroButton: UIButton!
     var nameLabel: UILabel!
-    var levelLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,18 +48,6 @@ class MenuViewController: UIViewController {
             make.left.equalTo(view).offset(20)
             make.top.equalTo(view).offset(30)
             make.height.equalTo(30)
-        })
-        
-        levelLabel = UILabel()
-        levelLabel?.textColor = UIColor.ThemeColors.mediumLightColor
-        levelLabel?.text = getLevel()
-        levelLabel?.textAlignment = .center
-        levelLabel?.font = UIFont(name: appFont, size: 18)
-        view.addSubview(levelLabel!)
-        levelLabel?.snp.makeConstraints({make in
-            make.left.equalTo(view).offset(20)
-            make.top.equalTo(nameLabel.snp.bottom)
-            make.height.equalTo(50)
         })
         
         leaderBoard = UIButton()
@@ -115,7 +102,8 @@ class MenuViewController: UIViewController {
     }
     
     func imageMap() {
-        
+        let map = ImageMapViewController()
+        present(map, animated: true, completion: nil)
     }
     
     func reset() {
