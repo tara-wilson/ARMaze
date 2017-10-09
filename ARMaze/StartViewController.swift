@@ -9,17 +9,14 @@
 import UIKit
 
 
-let welcomeOne = "Welcome! You are an astronaut in the year 3000, sent to explore a foreign planet."
-let answerOne = "Okay... why?"
+let welcomeOne = "Welcome! You are an astronaut in the year 3000, sent to explore a foreign planet, living billions of miles from earth."
+let answerOne = "Okay... is it going well?"
 
-let welcomeTwo = "The human population has grown too large and we need to find a new planet. The planet you have been sent to is promising because it's shown signs of plant growth."
-let answerTwo = "Awesome! Is my mission going well?"
+let welcomeTwo = "No. You crash landed on the planet. Your spaceship is in pieces. The only plant that grows on the planet is corn, and it's been shaped into mysterious patterns..."
+let answerTwo = "What?! Well what am I supposed to do?"
 
-let welcomeThree = "No. You crash landed on the planet. Your spaceship is in pieces. The only plant that grows on the planet is corn, and it's been shaped into mysterious patterns..."
-let answerThree = "What?! Well what am I supposed to do?"
-
-let welcomeFour = "Search in the corn fields and find all the pieces of your ship so that you can get back to earth!"
-let answerFour = "Let's go!"
+let welcomeThree = "Search in the corn fields and find all the pieces of your ship so that you can get back to earth!"
+let answerThree = "Let's go!"
 
 enum Level {
     case easy, hard
@@ -30,8 +27,8 @@ class StartViewController: UIViewController {
     var letterIndex = 0
     var stringIndex = 0
     var answerIndex = 0
-    let welcomeStrings = [welcomeOne, welcomeTwo, welcomeThree, welcomeFour]
-    let answers = [answerOne, answerTwo, answerThree, answerFour]
+    let welcomeStrings = [welcomeOne, welcomeTwo, welcomeThree]
+    let answers = [answerOne, answerTwo, answerThree]
     var typingBox: UILabel?
     var currentText = ""
     var button: UIButton!
@@ -76,7 +73,7 @@ class StartViewController: UIViewController {
     
     var timer:Timer?
     func fireTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: "typeLetter", userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: "typeLetter", userInfo: nil, repeats: true)
     }
     
     func typeLetter() {
@@ -88,7 +85,7 @@ class StartViewController: UIViewController {
                 self.currentText = self.currentText + "\(character)"
                 self.typingBox?.text = self.currentText
                 self.letterIndex = self.letterIndex + 1
-                let randomInterval = Double((arc4random_uniform(8)+1))/40
+                let randomInterval = Double((arc4random_uniform(3)+1))/40
                 timer?.invalidate()
                 timer = Timer.scheduledTimer(timeInterval: randomInterval, target: self, selector: "typeLetter", userInfo: nil, repeats: false)
             } else {
@@ -99,7 +96,7 @@ class StartViewController: UIViewController {
     }
     
     func pressButton() {
-        if self.answers[answerIndex] == answerFour {
+        if self.answers[answerIndex] == answerThree {
             let vc = NameViewController()
             navigationController?.pushViewController(vc, animated: true)
         } else {

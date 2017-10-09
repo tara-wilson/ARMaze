@@ -10,6 +10,7 @@ import Foundation
 import CoreLocation
 import MapKit
 import SnapKit
+import PopupDialog
 
 class MapViewController: UIViewController {
     
@@ -24,13 +25,60 @@ class MapViewController: UIViewController {
     var myPoints: UILabel!
     var timer: UILabel!
     var timerInt: Int = 0
-    var gameTimer: Timer!
+    var gameTimer: Timer?
+    var currentBackgroundDate: NSDate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpMap()
         setUpButtons()
         setUpTargets(level: self.level)
+        alertStart()
+        NotificationCenter.default.addObserver(self, selector: "pauseApp", name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: "startApp", name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+    }
+    
+    func pauseApp() {
+        saveTimer()
+        if let timer = gameTimer {
+            timer.invalidate()
+        }
+        self.currentBackgroundDate = NSDate()
+    }
+    
+    func startApp() {
+        setUpInventory()
+    }
+    
+    func alertStart() {
+        if UserDefaults.standard.bool(forKey: "hasSeenInstructions") == false {
+            UserDefaults.standard.set(true, forKey: "hasSeenInstructions")
+            let dialogAppearance = PopupDialogDefaultView.appearance()
+            
+            dialogAppearance.backgroundColor      = UIColor.ThemeColors.darkColor
+            dialogAppearance.titleFont            = UIFont(name: appFont, size: 25)!
+            dialogAppearance.titleColor           = UIColor.white
+            dialogAppearance.messageFont          = UIFont(name: appFont, size: 18)!
+            dialogAppearance.messageColor         = UIColor.white
+            
+            let title = "WELCOME"
+            let message = "Walk around the maze to collect the ship pieces. When you are close enough to a piece, click on the pin and it will open a viewer. When you see the ship piece in the view, tap on it to save it into your inventory."
+            
+            let popup = PopupDialog(title: title, message: message)
+            
+            let buttonOne = CancelButton(title: "OK") {
+                print("Alright")
+            }
+            
+            buttonOne.buttonColor = UIColor.ThemeColors.mediumLightColor
+            buttonOne.titleColor = UIColor.ThemeColors.darkColor
+            buttonOne.titleFont = UIFont(name: appFont, size: 18)!
+            
+            popup.addButtons([buttonOne])
+            
+            // Present dialog
+            self.present(popup, animated: true, completion: nil)
+        }
     }
     
     func setUpButtons() {
@@ -113,7 +161,6 @@ class MapViewController: UIViewController {
     func setUpMap() {
         mapView = MKMapView()
         mapView.delegate = self
-        mapView.mapType = .satellite
         mapView.userTrackingMode = MKUserTrackingMode.followWithHeading
         if CLLocationManager.authorizationStatus() == .notDetermined {
             locationManager.requestWhenInUseAuthorization()
@@ -145,8 +192,7 @@ class MapViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        saveTimer()
-        gameTimer.invalidate()
+        pauseApp()
     }
     
 }

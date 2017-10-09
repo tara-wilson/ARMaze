@@ -22,8 +22,8 @@ class CameraViewController: UIViewController {
     var cameraSession: AVCaptureSession?
     var cameraLayer: AVCaptureVideoPreviewLayer?
     var target: ShipObject!
-    var rightIndicator: UILabel!
-    var leftIndicator: UILabel!
+    var rightIndicator: UIImageView!
+    var leftIndicator: UIImageView!
     var sceneView: SCNView!
     var locationManager = CLLocationManager()
     var heading: Double = 0
@@ -54,8 +54,9 @@ class CameraViewController: UIViewController {
             make.edges.equalTo(view)
         })
         
-        leftIndicator = UILabel()
-        leftIndicator.backgroundColor = UIColor.gray
+        leftIndicator = UIImageView()
+        leftIndicator.image = UIImage(named: "leftarrow")
+        leftIndicator.contentMode = .scaleAspectFit
         view.addSubview(leftIndicator)
         leftIndicator.snp.makeConstraints({
             make in
@@ -64,8 +65,9 @@ class CameraViewController: UIViewController {
             make.height.width.equalTo(50)
         })
         
-        rightIndicator = UILabel()
-        rightIndicator.backgroundColor = UIColor.gray
+        rightIndicator = UIImageView()
+        rightIndicator.image = UIImage(named: "circlerightarrow")
+        rightIndicator.contentMode = .scaleAspectFit
         view.addSubview(rightIndicator)
         rightIndicator.snp.makeConstraints({
             make in
@@ -180,16 +182,18 @@ extension CameraViewController: CLLocationManagerDelegate {
             rightIndicator.isHidden = true
         }
         
-        //tara here
-        let distance = userLocation.distance(from: target.location!)
+        //tara here only if item is crate
+        var distance = userLocation.distance(from: target.location!)
+        if self.target.piece.getDAE() != "ComDish.dae" {
+            distance = -50
+        }
         if let node = target.itemNode {
             if node.parent == nil {
-                node.position = SCNVector3(x: Float(delta), y: 0, z: -500)
+                node.position = SCNVector3(x: Float(delta), y: 0, z: Float(distance))
                 scene.rootNode.addChildNode(node)
             } else {
-                //6
                 node.removeAllActions()
-                node.runAction(SCNAction.move(to: SCNVector3(x: Float(delta), y: 0, z: -500), duration: 0.2))
+                node.runAction(SCNAction.move(to: SCNVector3(x: Float(delta), y: 0, z: Float(distance)), duration: 0.2))
             }
         }
     }

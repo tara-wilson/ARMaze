@@ -141,17 +141,61 @@ class NetworkController: NSObject {
     func sendScore(score: Score, completion: @escaping((Int) -> Void)) {
         if let name = getName() {
             let newRef = ref
-                .child("users/\(name)")
-            newRef.setValue(["time":score.time])
-            newRef.setValue(["score":score.points], withCompletionBlock: {
-                comp in
-                completion(score.points)
+                .child("users/\(name)/score")
+            newRef.setValue(score.points)
+            completion(score.points)
+        }
+    }
+    
+    func sendTime(time: Int) {
+        if let name = getName() {
+            let string = "users/\(name)/time"
+            let query = ref.child(string)
+            query.observeSingleEvent(of: .value, with: {
+                snapshot in
+                if let val = snapshot.value as? Int {
+                    if time >= val {
+                        self.ref.child("users/\(name)/time").setValue(time)
+                    }
+                } else {
+                    self.ref.child("users/\(name)/time").setValue(time)
+                }
+            }, withCancel: {
+                (error) in
             })
         }
     }
     
-    func getLeaderBoard(completion: @escaping(([String: Score]) -> Void)) {
-        //query users
+    func getLeaderBoard(completion: @escaping(([String: Score]?) -> Void)) {
+        let string = "users"
+        let query = ref.child(string).queryOrdered(byChild: "score")
+        query.observeSingleEvent(of: .value, with: {
+            snapshot in
+            let snap = snapshot.value
+            var leaderboard = [String: Score]()
+            if let dict = snap as? NSDictionary {
+                let allusers = dict.allKeys as! [String]
+                for key in allusers {
+                    if let scoreandpoints = dict[key] as? NSDictionary {
+                        if let score = scoreandpoints["score"] as? Int {
+                            if let time = scoreandpoints["time"] as? Int {
+                                let newscore = Score()
+                                newscore.points = score
+                                newscore.time = time
+                                leaderboard[key] = newscore
+                            }
+                        }
+                    }
+                }
+                completion(leaderboard)
+            }
+            else {
+                completion(nil)
+            }
+        }, withCancel: {
+            (error) in
+            completion(nil)
+        })
     }
     
 }

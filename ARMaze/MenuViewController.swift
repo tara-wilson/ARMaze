@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PopupDialog
 
 class MenuViewController: UIViewController {
     
@@ -86,6 +87,18 @@ class MenuViewController: UIViewController {
             make.height.equalTo(50)
         })
         
+        let help = UIButton()
+        help.setTitle("Help", for: .normal)
+        help.titleLabel?.font = UIFont(name: appFont, size: 25)
+        help.setTitleColor(UIColor.ThemeColors.mediumLightColor, for: .normal)
+        help.addTarget(self, action: #selector(MenuViewController.help), for: .touchUpInside)
+        view.addSubview(help)
+        help.snp.makeConstraints({ make in
+            make.left.equalTo(view.snp.left).offset(10)
+            make.top.equalTo(resetButton.snp.bottom).offset(20)
+            make.height.equalTo(50)
+        })
+        
     }
     
     func getName() -> String {
@@ -106,8 +119,80 @@ class MenuViewController: UIViewController {
         present(map, animated: true, completion: nil)
     }
     
-    func reset() {
+    func help() {
+        UserDefaults.standard.set(true, forKey: "hasSeenInstructions")
+        let dialogAppearance = PopupDialogDefaultView.appearance()
         
+        dialogAppearance.backgroundColor      = UIColor.ThemeColors.darkColor
+        dialogAppearance.titleFont            = UIFont(name: appFont, size: 25)!
+        dialogAppearance.titleColor           = UIColor.white
+        dialogAppearance.messageFont          = UIFont(name: appFont, size: 18)!
+        dialogAppearance.messageColor         = UIColor.white
+        
+        let title = "WELCOME"
+        let message = "Walk around the maze to collect the ship pieces. When you are close enough to a piece, click on the pin and it will open a viewer. When you see the ship piece in the view, tap on it to save it into your inventory."
+        
+        let popup = PopupDialog(title: title, message: message)
+        
+        let buttonOne = CancelButton(title: "OK") {
+            print("Alright")
+        }
+        
+        buttonOne.buttonColor = UIColor.ThemeColors.mediumLightColor
+        buttonOne.titleColor = UIColor.ThemeColors.darkColor
+        buttonOne.titleFont = UIFont(name: appFont, size: 18)!
+        
+        popup.addButtons([buttonOne])
+        
+        // Present dialog
+        self.present(popup, animated: true, completion: nil)
+    }
+    
+    func areYouSure() {
+        let dialogAppearance = PopupDialogDefaultView.appearance()
+        
+        dialogAppearance.backgroundColor      = UIColor.ThemeColors.darkColor
+        dialogAppearance.titleFont            = UIFont(name: appFont, size: 25)!
+        dialogAppearance.titleColor           = UIColor.white
+        dialogAppearance.messageFont          = UIFont(name: appFont, size: 18)!
+        dialogAppearance.messageColor         = UIColor.white
+        
+        let title = "Are you sure?"
+        let message = "Do you really want to reset your game? All progress will be lost."
+        
+        let popup = PopupDialog(title: title, message: message)
+        
+        let buttonOne = CancelButton(title: "Yes, reset.") {
+            self.yesReset()
+        }
+        let buttonTwo = CancelButton(title: "Never mind, don't reset.", action: {
+            
+        })
+        
+        buttonOne.buttonColor = UIColor.ThemeColors.mediumLightColor
+        buttonOne.titleColor = UIColor.ThemeColors.darkColor
+        buttonOne.titleFont = UIFont(name: appFont, size: 18)!
+        
+        buttonTwo.buttonColor = UIColor.ThemeColors.mediumLightColor
+        buttonTwo.titleColor = UIColor.ThemeColors.darkColor
+        buttonTwo.titleFont = UIFont(name: appFont, size: 18)!
+        
+        popup.addButtons([buttonOne, buttonTwo])
+        
+        // Present dialog
+        self.present(popup, animated: true, completion: nil)
+    }
+    
+    func yesReset() {
+        UserDefaults.standard.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+        UserDefaults.standard.synchronize()
+        let nav = UINavigationController(rootViewController: StartViewController())
+        nav.isNavigationBarHidden = true
+        present(nav, animated: true, completion: nil)
+    }
+    
+    func reset() {
+        areYouSure()
     }
 
     func close() {

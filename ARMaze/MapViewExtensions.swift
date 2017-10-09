@@ -54,7 +54,7 @@ extension MapViewController: MKMapViewDelegate {
         let coordinate = view.annotation!.coordinate
         
         if let userCoordinate = userLocation {
-//            if userCoordinate.distance(from: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)) < radius {
+            if userCoordinate.distance(from: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)) < Double(radius) {
                 let vc = CameraViewController()
                 
                 if let mapAnnotation = view.annotation as? MapAnnotation {
@@ -64,7 +64,7 @@ extension MapViewController: MKMapViewDelegate {
                     vc.delegate = self
                     self.present(vc, animated: true, completion: nil)
                 }
-//            }
+            }
         }
     }
     
@@ -81,23 +81,11 @@ extension MapViewController: MKMapViewDelegate {
         targets.append(ShipObject(item: .shipPiece8))
         targets.append(ShipObject(item: .shipPiece9))
         targets.append(ShipObject(item: .shipPiece10))
-        
-        if level == .hard {
-            targets.append(ShipObject(item: .extraPiece1))
-            targets.append(ShipObject(item: .extraPiece2))
-            targets.append(ShipObject(item: .extraPiece3))
-            targets.append(ShipObject(item: .extraPiece4))
-            targets.append(ShipObject(item: .extraPiece5))
-            targets.append(ShipObject(item: .extraPiece6))
-            targets.append(ShipObject(item: .extraPiece7))
-            targets.append(ShipObject(item: .extraPiece8))
-            targets.append(ShipObject(item: .extraPiece9))
-            targets.append(ShipObject(item: .extraPiece10))
-        }
-        removeInventory()
+    
+        setUpInventory()
     }
     
-    func removeInventory() {
+    func setUpInventory() {
         let defaults = UserDefaults.standard
         var toRemove = [Int]()
         for (index, item) in targets.enumerated() {
@@ -109,14 +97,28 @@ extension MapViewController: MKMapViewDelegate {
         for index in toRemove {
             targets.remove(at: index)
         }
+        
+        var timerval = UserDefaults.standard.integer(forKey: "timer")
+        let difference = self.currentBackgroundDate?.timeIntervalSince(Date())
+        print("tara here")
+        print(difference)
+        timerval = timerval + Int((difference ?? 0)/1000)
+        self.timerInt = timerval
+        if inventory.count > 0 {
+            gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
+        }
         saveScore()
     }
     
     func addToInventory(index: Int) {
+        if gameTimer == nil {
+            startApp()
+        }
         let item = targets[index]
         self.targets.remove(at: index)
         inventory.append(item)
         saveCollected()
+        saveScore()
         if self.targets.count == 0 {
             alertDone()
         }
@@ -132,11 +134,15 @@ extension MapViewController: MKMapViewDelegate {
         let numItems = inventory.count
         let score = Score()
         score.points = numItems * 100
+        
+        self.myPoints.text = "\(numItems * 100)"
+        
         score.time = self.timerInt
             
         NetworkController().sendScore(score: score, completion: {
             score in
         })
+        NetworkController().sendTime(time: timerInt)
     }
     
     func alertDone() {
@@ -169,6 +175,7 @@ extension MapViewController: MKMapViewDelegate {
     }
     
     func alertFound(item: ShipObject) {
+        saveTimer()
         let dialogAppearance = PopupDialogDefaultView.appearance()
         
         dialogAppearance.backgroundColor      = UIColor.ThemeColors.darkColor
@@ -205,11 +212,12 @@ extension MapViewController: ARControllerDelegate {
         let item = targets[index!]
         
         addToInventory(index: index!)
-        alertFound(item: item)
         if selectedAnnotation != nil {
             mapView.removeAnnotation(selectedAnnotation!)
         }
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: {
+            self.alertFound(item: item)
+        })
     }
     
     
@@ -219,17 +227,11 @@ extension MapViewController {
     
     func saveTimer() {
         UserDefaults.standard.set(timerInt, forKey: "timer")
-    }
-    
-    func getSavedTime() {
-        let timerval = UserDefaults.standard.integer(forKey: "timer")
-        self.timerInt = timerval
+        NetworkController().sendTime(time: timerInt)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getSavedTime()
-        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: true)
     }
     
     func runTimedCode() {

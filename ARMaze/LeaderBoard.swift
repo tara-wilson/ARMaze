@@ -13,19 +13,27 @@ class LeaderBoardViewController: UIViewController {
     
     var titleLabel: UILabel?
     var tableView: UITableView!
-    var scores: [String: Int]?
+    var scores: [String: Score]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.ThemeColors.darkColor
         setUpUI()
-        setUpTable()
         getLeaders()
-        //tara do refresh
     }
     
     func getLeaders() {
-        
+        NetworkController().getLeaderBoard(completion: {
+            leaderdict in
+            self.sortLeaderDict(leaderdict: leaderdict)
+        })
+    }
+    
+    func sortLeaderDict(leaderdict: [String: Score]?) {
+        if let leaderdict = leaderdict {
+            self.scores = leaderdict
+            self.tableView.reloadData()
+        }
     }
     
     func setUpUI() {
@@ -40,7 +48,24 @@ class LeaderBoardViewController: UIViewController {
         backButton.addTarget(self, action: #selector(LeaderBoardViewController.close), for: .touchUpInside)
         view.addSubview(backButton)
         backButton.snp.makeConstraints({ make in
-            make.left.equalTo(view.snp.left).offset(10)
+            make.left.equalTo(view.snp.left).offset(20)
+            make.top.equalTo(view).offset(20)
+            make.height.equalTo(50)
+            make.width.equalTo(120)
+        })
+        
+        let refreshButton = UIButton()
+        refreshButton.backgroundColor = UIColor.ThemeColors.mediumDarkColor
+        refreshButton.layer.borderWidth = 1
+        refreshButton.layer.borderColor = UIColor.ThemeColors.mediumLightColor.cgColor
+        refreshButton.layer.cornerRadius = 5
+        refreshButton.setTitle("Refresh", for: .normal)
+        refreshButton.titleLabel?.font = UIFont(name: appFont, size: 18)
+        refreshButton.setTitleColor(UIColor.ThemeColors.mediumLightColor, for: .normal)
+        refreshButton.addTarget(self, action: #selector(LeaderBoardViewController.refresh), for: .touchUpInside)
+        view.addSubview(refreshButton)
+        refreshButton.snp.makeConstraints({ make in
+            make.right.equalTo(view.snp.right).offset(-20)
             make.top.equalTo(view).offset(20)
             make.height.equalTo(50)
             make.width.equalTo(120)
@@ -55,25 +80,27 @@ class LeaderBoardViewController: UIViewController {
         titleLabel?.snp.makeConstraints({make in
             make.left.equalTo(view).offset(20)
             make.right.equalTo(view).offset(-20)
-            make.top.equalTo(view).offset(50)
+            make.top.equalTo(view).offset(70)
             make.height.equalTo(60)
         })
-    }
-    
-    func setUpTable() {
-        tableView = UITableView()
+        
+        self.tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor.ThemeColors.darkColor
-        tableView.tableFooterView = UIView()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(LeaderBoardCell.self, forCellReuseIdentifier: "cell")
         view.addSubview(tableView)
-        view.snp.makeConstraints({ make in
+        tableView.snp.makeConstraints({
+            make in
             make.left.equalTo(view)
             make.right.equalTo(view)
             make.bottom.equalTo(view)
-            make.top.equalTo(view).offset(80)
+            make.top.equalTo(view).offset(150)
         })
+    }
+    
+    func refresh() {
+        self.getLeaders()
     }
     
     func close() {
@@ -92,7 +119,61 @@ extension LeaderBoardViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? LeaderBoardCell {
+            if let scores = self.scores as? NSDictionary {
+                if let keys = scores.allKeys as? [String] {
+                    let score = scores[keys[indexPath.row]] as! Score
+                    cell.addScore(newname: keys[indexPath.row], newscore: score, index: indexPath.row)
+                    return cell
+                }
+            }
+        }
         return UITableViewCell()
     }
     
+}
+
+class LeaderBoardCell: UITableViewCell {
+    
+    var name: UILabel?
+    var score: UILabel?
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.backgroundColor = UIColor.ThemeColors.darkColor
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setup() {
+        name = UILabel()
+        name?.textColor = UIColor.ThemeColors.mediumLightColor
+        name?.font = UIFont(name: appFont, size: 18)
+        contentView.addSubview(name!)
+        name?.snp.makeConstraints({make in
+            make.left.equalTo(contentView).offset(20)
+            make.top.equalTo(contentView)
+            make.bottom.equalTo(contentView)
+        })
+        
+        score = UILabel()
+        score?.textColor = UIColor.ThemeColors.mediumLightColor
+        score?.font = UIFont(name: appFont, size: 18)
+        score?.textAlignment = .right
+        contentView.addSubview(score!)
+        score?.snp.makeConstraints({make in
+            make.right.equalTo(contentView.snp.right).offset(20)
+            make.top.equalTo(contentView)
+            make.bottom.equalTo(contentView)
+        })
+
+    }
+    
+    func addScore(newname: String, newscore: Score, index: Int) {
+        name?.text = "\(index + 1). \(newname)"
+        score?.text = "\(newscore.points!): \(newscore.time ?? 0)"
+    }
 }

@@ -42,57 +42,94 @@ enum ShipPiece: String {
     case shipPiece9 = "ShipPiece9"
     case shipPiece10 = "ShipPiece10"
     
-    case extraPiece1 = "ExtraPiece1"
-    case extraPiece2 = "ExtraPiece2"
-    case extraPiece3 = "ExtraPiece3"
-    case extraPiece4 = "ExtraPiece4"
-    case extraPiece5 = "ExtraPiece5"
-    case extraPiece6 = "ExtraPiece6"
-    case extraPiece7 = "ExtraPiece7"
-    case extraPiece8 = "ExtraPiece8"
-    case extraPiece9 = "ExtraPiece9"
-    case extraPiece10 = "ExtraPiece10"
-    
     func getDAE() -> String {
-        return "model.dae"
-//        return "nissan-front-wheel.dae"
-        
         switch self {
         case .entrance:
-            return ""
+            return "cratemodel.dae"
         case .afterWalk:
-            return ""
+            return "radiomodel.dae"
         case .shipPiece1:
             return "ComDish.dae"
         case .shipPiece2:
-            return "screw.dae"
+            return "cratemodel.dae"
         case .shipPiece3:
-            return ""
+            return "cratemodel.dae"
         case .shipPiece4:
-            return ""
+            return "cratemodel.dae"
         case .shipPiece5:
-            return ""
+            return "controllermodel.dae"
         case .shipPiece6:
-            return ""
+            return "cratemodel.dae"
         case .shipPiece7:
-            return ""
+            return "cratemodel.dae"
         case .shipPiece8:
             return "ComDish.dae"
-        default:
-            return ""
+        case .shipPiece9:
+            return "cratemodel.dae"
+        case .shipPiece10:
+            return "fuelmodel.dae"
         }
     }
     
     func getFoundString() -> String {
-        return ""
+        switch self {
+        case .entrance:
+            return "You found a crate full of food supplies! This will help get you through the coming journey."
+        case .afterWalk:
+            return "AWESOME! You found the radio! We'd never get back without this."
+        case .shipPiece1:
+            return "You found one of our sattelites.... unfortunately this one is too broken to use. Let's hope you find a working one somewhere."
+        case .shipPiece2:
+            return "You found more food supplies!"
+        case .shipPiece3:
+            return "You found some scrap metal and wires! That's great, we'll need that to get the ship up and running again."
+        case .shipPiece4:
+            return "Unfortunately, there was nothing in that crate. Keep looking!"
+        case .shipPiece5:
+            return "You found our ship controller! That's amazing! Now all we need is a working sattelite dish and some fuel and we can get off this planet."
+        case .shipPiece6:
+            return "Darn, another empty crate!"
+        case .shipPiece7:
+            return "You found more food supplies. Better hold on to those because we'll need them on the journey home if we ever find the rest of the ship pieces."
+        case .shipPiece8:
+            return "YES! You found the working sattelite dish! We're so close."
+        case .shipPiece9:
+            return "UGH ANOTHER EMPTY CRATE"
+        case .shipPiece10:
+            return "THE FUEL!!!!! YES! GREAT JOB!"
+        }
     }
     
     func getImage() -> UIImage {
-        return UIImage(named: "radar")!
+        switch self {
+        case .entrance:
+            return UIImage(named: "groceries")!
+        case .afterWalk:
+            return UIImage(named: "radio-antenna")!
+        case .shipPiece1:
+            return UIImage(named: "radar")!
+        case .shipPiece2:
+            return UIImage(named: "groceries")!
+        case .shipPiece3:
+            return UIImage(named: "plug")!
+        case .shipPiece4:
+            return UIImage(named: "crate")!
+        case .shipPiece5:
+            return UIImage(named: "circuit-board")!
+        case .shipPiece6:
+            return UIImage(named: "crate")!
+        case .shipPiece7:
+            return UIImage(named: "groceries")!
+        case .shipPiece8:
+            return UIImage(named: "radar")!
+        case .shipPiece9:
+            return UIImage(named: "crate")!
+        case .shipPiece10:
+            return UIImage(named: "gasoline")!
+        }
     }
     
     func getDAEName() -> String? {
-        return nil
         switch self {
         case .shipPiece1:
             return "DishDEAD"
@@ -104,7 +141,8 @@ enum ShipPiece: String {
     }
     
     func getLocation() -> CLLocation? {
-        return CLLocation(latitude: 39.003744, longitude: -76.8080199)
+        //tara take this out
+        return CLLocation(latitude: 38.915253, longitude: -76.984323)
         
         let raw = self.rawValue
         let lat = UserDefaults.standard.float(forKey: "\(raw)_lat")
